@@ -359,4 +359,90 @@
         <tag>链表</tag>
       </tags>
   </entry>
+  <entry>
+    <title>高速缓存的概念</title>
+    <url>/2022/04/25/%E9%AB%98%E9%80%9F%E7%BC%93%E5%AD%98/</url>
+    <content><![CDATA[<h3 id="一、什么是缓存"><a href="#一、什么是缓存" class="headerlink" title="一、什么是缓存"></a>一、什么是缓存</h3><blockquote>
+<p>缓存：内存的缓冲区域</p>
+</blockquote>
+<ol>
+<li>缓存的本质<ol>
+<li>和硬盘一样，<strong>存储数据和指令</strong></li>
+<li>区别在于<strong>读取速度的不同</strong></li>
+</ol>
+</li>
+</ol>
+<blockquote>
+<p>问：为什么需要缓存？<br>答：程序存储在内存但每次从内存中取出指令需要10万个时钟周期，造成资源浪费，所以引出缓存这个东西</p>
+</blockquote>
+<ol start="2">
+<li>缓存的作用<ol>
+<li>在CPU和内存之间添加缓存</li>
+<li>容量小，只用来存储CPU执行常用的指令</li>
+</ol>
+</li>
+</ol>
+<p><img src="/images/2022-04-25-23-17-15.png" alt="存储器层次结构" title="存储器层次结构"></p>
+<h3 id="二、缓存相关名词"><a href="#二、缓存相关名词" class="headerlink" title="二、缓存相关名词"></a>二、缓存相关名词</h3><p><img src="/images/2022-04-26-00-02-05.png"></p>
+<p><em>当程序需要数据块10时</em>，有以下几种情况</p>
+<ol>
+<li><p>缓存命中</p>
+<ol>
+<li>缓存中有数据块10，则<strong>直接返回给CPU</strong>，这叫做<strong>缓存命中</strong></li>
+</ol>
+</li>
+<li><p>缓存不命中</p>
+<ol>
+<li>缓存行（k层）中有数据块，但没有10，这叫做<strong>缓存不命中</strong>，此时缓存从下一层（k+1层）中复制数据块到缓存行中替换一个现有的数据块（如果k+1没有就继续往下一层找），并保持在那里，等待稍后的访问<blockquote>
+<p><strong>最近最少被使用替换策略（LRU）</strong>，会选择很长时间都没有或很少使用的块，可以思考下LRU是怎么实现的</p>
+</blockquote>
+</li>
+<li>缓存行（k层）中为空，这叫做<strong>冷不命中</strong>，从下一层中复制数据块到缓存行<blockquote>
+<p>那么从下一层中取出的块放在哪呢？<br>答：<strong>放置策略</strong>，最常用的是第k+1层的块i必须放在第k层的块（i mod 4）中。比如，第k+1层的0,4,8,12会映射到第k层的块0。块1,5,9,13会映射到块1。</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><p>冲突不命中</p>
+<ol>
+<li><p>上述的放置策略会引起一个问题，就是<strong>冲突不命中</strong></p>
+<blockquote>
+<p>1.首先0，4，8，12都是映射到块0的<br>2.如果我请求块0，然后第一次不命中，然后将0放置到块0上<br>3.然后我请求块4，然后第二次不命中，因为4和0映射到同一个块上，4会替换0<br>4.然后我再请求0，这时发生第三次不命中，因为块0现在是4，这时0又会替换4</p>
+</blockquote>
+</li>
+<li><p>即使缓存总共可以容纳4个块甚至更多，但因为0，4，8，12被映射到同一个块，它不能分散去其他块，如果我请求的都是这个块里的对象，就会产生冲突，因为会每次都不命中，它只在一个缓存块里替换、使用</p>
+</li>
+</ol>
+</li>
+<li><p>容量不命中</p>
+<ol>
+<li>工作集的大小超过缓存大小时，缓存会经历<strong>容量不命中</strong><blockquote>
+<p>缓存太小了，不能处理这个工作集</p>
+</blockquote>
+</li>
+</ol>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>csapp</category>
+      </categories>
+      <tags>
+        <tag>存储器层次结构</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>高速缓存存储器</title>
+    <url>/2022/04/26/%E9%AB%98%E9%80%9F%E7%BC%93%E5%AD%982/</url>
+    <content><![CDATA[<h3 id="一、高速缓存存储器组织结构"><a href="#一、高速缓存存储器组织结构" class="headerlink" title="一、高速缓存存储器组织结构"></a>一、高速缓存存储器组织结构</h3><blockquote>
+<p>CPU首先在缓存查找数据–&gt; L1 –&gt; L2 –&gt; L3 –&gt; 主存，这里我们假设，CPU和主存之间只有一个L1高速缓存</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>csapp</category>
+      </categories>
+      <tags>
+        <tag>存储器层次结构</tag>
+      </tags>
+  </entry>
 </search>

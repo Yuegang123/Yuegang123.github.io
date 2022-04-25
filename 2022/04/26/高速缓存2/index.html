@@ -20,26 +20,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"yuegang123.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.11.0","exturl":false,"sidebar":{"position":"right","width":300,"display":"always","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="笔记|计算机知识|maybe生活分享">
-<meta property="og:type" content="website">
-<meta property="og:title" content="GGlietの记事本">
-<meta property="og:url" content="https://yuegang123.github.io/tags/%E5%8D%95%E9%93%BE%E8%A1%A8/index.html">
+    <meta name="description" content="一、高速缓存存储器组织结构 CPU首先在缓存查找数据–&gt; L1 –&gt; L2 –&gt; L3 –&gt; 主存，这里我们假设，CPU和主存之间只有一个L1高速缓存">
+<meta property="og:type" content="article">
+<meta property="og:title" content="高速缓存存储器">
+<meta property="og:url" content="https://yuegang123.github.io/2022/04/26/%E9%AB%98%E9%80%9F%E7%BC%93%E5%AD%982/index.html">
 <meta property="og:site_name" content="GGlietの记事本">
-<meta property="og:description" content="笔记|计算机知识|maybe生活分享">
+<meta property="og:description" content="一、高速缓存存储器组织结构 CPU首先在缓存查找数据–&gt; L1 –&gt; L2 –&gt; L3 –&gt; 主存，这里我们假设，CPU和主存之间只有一个L1高速缓存">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-04-25T17:43:00.000Z">
+<meta property="article:modified_time" content="2022-04-25T17:47:41.556Z">
 <meta property="article:author" content="ggliet">
-<meta property="article:tag" content="知识|分享">
+<meta property="article:tag" content="存储器层次结构">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://yuegang123.github.io/tags/%E5%8D%95%E9%93%BE%E8%A1%A8/">
+<link rel="canonical" href="https://yuegang123.github.io/2022/04/26/%E9%AB%98%E9%80%9F%E7%BC%93%E5%AD%982/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"tags/单链表/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://yuegang123.github.io/2022/04/26/%E9%AB%98%E9%80%9F%E7%BC%93%E5%AD%982/","path":"2022/04/26/高速缓存2/","title":"高速缓存存储器"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>标签: 单链表 | GGlietの记事本</title>
+<title>高速缓存存储器 | GGlietの记事本</title>
   
 
 
@@ -129,7 +131,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -142,6 +144,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E9%AB%98%E9%80%9F%E7%BC%93%E5%AD%98%E5%AD%98%E5%82%A8%E5%99%A8%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84"><span class="nav-number">1.</span> <span class="nav-text">一、高速缓存存储器组织结构</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -195,50 +198,118 @@
 </noscript>
 
 
-    <div class="main-inner tag posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
+
+
+<div class="post-block">
   
   
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <h1 class="collection-header">单链表
-          <small>标签</small>
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://yuegang123.github.io/2022/04/26/%E9%AB%98%E9%80%9F%E7%BC%93%E5%AD%982/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="ggliet">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="GGlietの记事本">
+      <meta itemprop="description" content="笔记|计算机知识|maybe生活分享">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="高速缓存存储器 | GGlietの记事本">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          高速缓存存储器
         </h1>
-      </div>
 
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
       
-    <div class="collection-year">
-      <span class="collection-header">2022</span>
+
+      <time title="创建时间：2022-04-26 01:43:00 / 修改时间：01:47:41" itemprop="dateCreated datePublished" datetime="2022-04-26T01:43:00+08:00">2022-04-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/csapp/" itemprop="url" rel="index"><span itemprop="name">csapp</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>79</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h3 id="一、高速缓存存储器组织结构"><a href="#一、高速缓存存储器组织结构" class="headerlink" title="一、高速缓存存储器组织结构"></a>一、高速缓存存储器组织结构</h3><blockquote>
+<p>CPU首先在缓存查找数据–&gt; L1 –&gt; L2 –&gt; L3 –&gt; 主存，这里我们假设，CPU和主存之间只有一个L1高速缓存</p>
+</blockquote>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-04-19T16:49:00+08:00"
-              content="2022-04-19">
-          04-19
-        </time>
-      </div>
+    
+    
+    
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/04/19/%E7%BA%BF%E6%80%A7%E8%A1%A8-%E9%93%BE%E8%A1%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" itemprop="url">
-            <span itemprop="name">链表的基本概念</span>
-          </a>
-      </div>
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%AD%98%E5%82%A8%E5%99%A8%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84/" rel="tag"><i class="fa fa-tag"></i> 存储器层次结构</a>
+          </div>
 
-      
-    </header>
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/04/25/%E9%AB%98%E9%80%9F%E7%BC%93%E5%AD%98/" rel="prev" title="高速缓存的概念">
+                  <i class="fa fa-chevron-left"></i> 高速缓存的概念
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
   </article>
+</div>
 
-    </div>
-  </div>
-  
-  
-  
+
+
+
+
 
 </div>
   </main>
