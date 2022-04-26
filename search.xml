@@ -437,6 +437,14 @@
     <content><![CDATA[<h3 id="一、高速缓存存储器组织结构"><a href="#一、高速缓存存储器组织结构" class="headerlink" title="一、高速缓存存储器组织结构"></a>一、高速缓存存储器组织结构</h3><blockquote>
 <p>CPU首先在缓存查找数据–&gt; L1 –&gt; L2 –&gt; L3 –&gt; 主存，这里我们假设，CPU和主存之间只有一个L1高速缓存</p>
 </blockquote>
+<p><img src="/images/2022-04-27-01-16-42.png"></p>
+<blockquote>
+<p>我们可以将高速缓存存储器视为有S &#x3D; 2^s个高速缓存组的数组。每个组包含E &#x3D; 2^e个高速缓存行。每个行是由一个B &#x3D; 2^b个字节的数据块组成的。</p>
+</blockquote>
+<p><img src="/images/2022-04-27-01-28-21.png"></p>
+<blockquote>
+<p>高速缓存的大小（或容量）C指的是所有块的大小的和。标记位和有效位不包括在内 。因此，<strong>C&#x3D;S×E×B</strong>。</p>
+</blockquote>
 ]]></content>
       <categories>
         <category>csapp</category>
