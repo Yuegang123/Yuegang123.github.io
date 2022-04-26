@@ -20,26 +20,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"yuegang123.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.11.0","exturl":false,"sidebar":{"position":"right","width":300,"display":"always","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="笔记|计算机知识|maybe生活分享">
-<meta property="og:type" content="website">
-<meta property="og:title" content="GGlietの记事本">
-<meta property="og:url" content="https://yuegang123.github.io/tags/%E7%BA%BF%E6%80%A7%E8%A1%A8/index.html">
+    <meta name="description" content="一、图的术语和定义 无向图 无向图的边是无方向的 树是连通的无回路的无向图（最后一个结点不会指向根结点） 树T有n个顶点，则必有n-1条边 无向图的边数&#x3D;各顶点的度之和的一半   有向图 有向图的边是有方向的 多重图（哥尼斯堡七桥），简单图（不存在带环的图，同一条边不重复出现）   完全图 每个点都直接指向其他点，边最多 完全无向图（最多的边） 任意两个顶点之间都存在边，则n个顶点有n(">
+<meta property="og:type" content="article">
+<meta property="og:title" content="图的基本概念">
+<meta property="og:url" content="https://yuegang123.github.io/2022/04/26/%E5%9B%BE%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/index.html">
 <meta property="og:site_name" content="GGlietの记事本">
-<meta property="og:description" content="笔记|计算机知识|maybe生活分享">
+<meta property="og:description" content="一、图的术语和定义 无向图 无向图的边是无方向的 树是连通的无回路的无向图（最后一个结点不会指向根结点） 树T有n个顶点，则必有n-1条边 无向图的边数&#x3D;各顶点的度之和的一半   有向图 有向图的边是有方向的 多重图（哥尼斯堡七桥），简单图（不存在带环的图，同一条边不重复出现）   完全图 每个点都直接指向其他点，边最多 完全无向图（最多的边） 任意两个顶点之间都存在边，则n个顶点有n(">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-04-26T00:50:00.000Z">
+<meta property="article:modified_time" content="2022-04-26T02:11:49.520Z">
 <meta property="article:author" content="ggliet">
-<meta property="article:tag" content="知识|分享">
+<meta property="article:tag" content="图">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://yuegang123.github.io/tags/%E7%BA%BF%E6%80%A7%E8%A1%A8/">
+<link rel="canonical" href="https://yuegang123.github.io/2022/04/26/%E5%9B%BE%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"tags/线性表/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://yuegang123.github.io/2022/04/26/%E5%9B%BE%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/","path":"2022/04/26/图的基本概念/","title":"图的基本概念"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>标签: 线性表 | GGlietの记事本</title>
+<title>图的基本概念 | GGlietの记事本</title>
   
 
 
@@ -129,7 +131,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -142,6 +144,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%9B%BE%E7%9A%84%E6%9C%AF%E8%AF%AD%E5%92%8C%E5%AE%9A%E4%B9%89"><span class="nav-number">1.</span> <span class="nav-text">一、图的术语和定义</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -195,130 +198,167 @@
 </noscript>
 
 
-    <div class="main-inner tag posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
+
+
+<div class="post-block">
   
   
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <h1 class="collection-header">线性表
-          <small>标签</small>
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://yuegang123.github.io/2022/04/26/%E5%9B%BE%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="ggliet">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="GGlietの记事本">
+      <meta itemprop="description" content="笔记|计算机知识|maybe生活分享">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="图的基本概念 | GGlietの记事本">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          图的基本概念
         </h1>
-      </div>
 
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
       
-    <div class="collection-year">
-      <span class="collection-header">2022</span>
+
+      <time title="创建时间：2022-04-26 08:50:00 / 修改时间：10:11:49" itemprop="dateCreated datePublished" datetime="2022-04-26T08:50:00+08:00">2022-04-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/csapp/" itemprop="url" rel="index"><span itemprop="name">csapp</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>353</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h3 id="一、图的术语和定义"><a href="#一、图的术语和定义" class="headerlink" title="一、图的术语和定义"></a>一、图的术语和定义</h3><ol>
+<li>无向图<ol>
+<li>无向图的边是无方向的</li>
+<li>树是连通的无回路的无向图<strong>（最后一个结点不会指向根结点）</strong></li>
+<li>树T有n个顶点，则<strong>必有n-1条边</strong></li>
+<li>无向图的边数&#x3D;各顶点的度之和的一半</li>
+</ol>
+</li>
+<li>有向图<ol>
+<li>有向图的边是有方向的</li>
+<li>多重图（哥尼斯堡七桥），简单图（不存在带环的图，同一条边不重复出现）</li>
+</ol>
+</li>
+<li>完全图<ol>
+<li>每个点都直接指向其他点，边最多</li>
+<li>完全无向图（最多的边）<ol>
+<li>任意两个顶点之间都存在边，则n个顶点有<em><em>n</em>(n-1)&#x2F;2</em>*条边</li>
+</ol>
+</li>
+<li>完全有向图（最多的边）<ol>
+<li>任意两个顶点之间存在方向互为相反的边，则n个顶点有*<em>n</em>(n-1)**条边</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>带权图（通常称为<strong>网</strong>）<ol>
+<li>图的边具有权值</li>
+</ol>
+</li>
+<li>稠密图<ol>
+<li>有很少条边的图</li>
+</ol>
+</li>
+<li>邻接顶点</li>
+<li>顶点的度<ol>
+<li>指与顶点关联的边数  | <strong>tips:与树的度定义不一样</strong><ol>
+<li>度为0称为孤立点</li>
+<li>度为1称为悬挂点</li>
+</ol>
+</li>
+<li>有向图<ol>
+<li>以结点i为<strong>起点</strong>的边数称为<strong>入度</strong></li>
+<li>以结点i为<strong>终点</strong>的边数称为<strong>出度</strong></li>
+</ol>
+</li>
+</ol>
+</li>
+<li>子图<ol>
+<li></li>
+</ol>
+</li>
+</ol>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-04-19T16:55:00+08:00"
-              content="2022-04-19">
-          04-19
-        </time>
-      </div>
+    
+    
+    
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/04/19/%E7%BA%BF%E6%80%A7%E8%A1%A8-%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" itemprop="url">
-            <span itemprop="name">双向链表的基本概念</span>
-          </a>
-      </div>
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%9B%BE/" rel="tag"><i class="fa fa-tag"></i> 图</a>
+          </div>
 
-      
-    </header>
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/04/26/%E9%AB%98%E9%80%9F%E7%BC%93%E5%AD%982/" rel="prev" title="高速缓存存储器">
+                  <i class="fa fa-chevron-left"></i> 高速缓存存储器
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
   </article>
+</div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-04-19T16:54:00+08:00"
-              content="2022-04-19">
-          04-19
-        </time>
-      </div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/04/19/%E7%BA%BF%E6%80%A7%E8%A1%A8-%E5%BE%AA%E7%8E%AF%E9%93%BE%E8%A1%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" itemprop="url">
-            <span itemprop="name">循环链表的基本概念</span>
-          </a>
-      </div>
 
-      
-    </header>
-  </article>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-04-19T16:51:00+08:00"
-              content="2022-04-19">
-          04-19
-        </time>
-      </div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/04/19/%E7%BA%BF%E6%80%A7%E8%A1%A8-%E9%9D%99%E6%80%81%E9%93%BE%E8%A1%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" itemprop="url">
-            <span itemprop="name">静态链表的基本概念</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-04-19T16:49:00+08:00"
-              content="2022-04-19">
-          04-19
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/04/19/%E7%BA%BF%E6%80%A7%E8%A1%A8-%E9%93%BE%E8%A1%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" itemprop="url">
-            <span itemprop="name">链表的基本概念</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-04-19T16:46:00+08:00"
-              content="2022-04-19">
-          04-19
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/04/19/%E7%BA%BF%E6%80%A7%E8%A1%A8-%E6%95%B0%E7%BB%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" itemprop="url">
-            <span itemprop="name">数组的基本概念</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-    </div>
-  </div>
-  
-  
-  
 
 </div>
   </main>

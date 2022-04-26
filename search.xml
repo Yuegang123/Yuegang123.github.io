@@ -382,22 +382,23 @@
 </ol>
 </li>
 </ol>
-<p><img src="/images/2022-04-25-23-17-15.png" alt="存储器层次结构" title="存储器层次结构"></p>
-<h3 id="二、缓存相关名词"><a href="#二、缓存相关名词" class="headerlink" title="二、缓存相关名词"></a>二、缓存相关名词</h3><p><em>当程序需要数据块10时</em>，有以下几种情况</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><img src="/images/2022-04-25-23-17-15.png" alt="存储器层次结构" title="存储器层次结构"></h2><h3 id="二、缓存相关名词"><a href="#二、缓存相关名词" class="headerlink" title="二、缓存相关名词"></a>二、缓存相关名词</h3><p><em>当程序需要数据块10时</em>，有以下几种情况</p>
 <ol>
 <li><p>缓存命中</p>
 <ol>
-<li>缓存中有数据块10，则<strong>直接返回给CPU</strong>，这叫做<strong>缓存命中</strong></li>
+<li>缓存中有数据块10，则<strong>直接返回给CPU</strong>，这叫做<strong>缓存命中</strong><br><img src="/images/2022-04-27-00-26-36.png"></li>
 </ol>
 </li>
 <li><p>缓存不命中</p>
 <ol>
-<li>缓存行（k层）中有数据块，但没有10，这叫做<strong>缓存不命中</strong>，此时缓存从下一层（k+1层）中复制数据块到缓存行中替换一个现有的数据块（如果k+1没有就继续往下一层找），并保持在那里，等待稍后的访问<blockquote>
-<p><strong>最近最少被使用替换策略（LRU）</strong>，会选择很长时间都没有或很少使用的块，可以思考下LRU是怎么实现的</p>
+<li><p>缓存行（k层）中有数据块，但没有10，这叫做<strong>缓存不命中</strong>，此时缓存从下一层（k+1层）中复制数据块到缓存行中替换一个现有的数据块（如果k+1没有就继续往下一层找），并保持在那里，等待稍后的访问</p>
+<blockquote>
+<p><strong>最近最少被使用替换策略（LRU）</strong>，会选择很长时间都没有或很少使用的块，可以思考下LRU是怎么实现的<br><img src="/images/2022-04-27-00-35-48.png"></p>
 </blockquote>
 </li>
-<li>缓存行（k层）中为空，这叫做<strong>冷不命中</strong>，从下一层中复制数据块到缓存行<blockquote>
-<p>那么从下一层中取出的块放在哪呢？<br>答：<strong>放置策略</strong>，最常用的是第k+1层的块i必须放在第k层的块（i mod 4）中。比如，第k+1层的0,4,8,12会映射到第k层的块0。块1,5,9,13会映射到块1。</p>
+<li><p>缓存行（k层）中为空，这叫做<strong>冷不命中</strong>，从下一层中复制数据块到缓存行</p>
+<blockquote>
+<p>那么从下一层中取出的块放在哪呢？<br>答：<strong>放置策略</strong>，最常用的是第k+1层的块i必须放在第k层的块（i mod 4）中。比如，第k+1层的0,4,8,12会映射到第k层的块0。块1,5,9,13会映射到块1。<br><img src="/images/2022-04-27-00-48-29.png"></p>
 </blockquote>
 </li>
 </ol>
@@ -442,6 +443,69 @@
       </categories>
       <tags>
         <tag>存储器层次结构</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>图的基本概念</title>
+    <url>/2022/04/26/%E5%9B%BE%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</url>
+    <content><![CDATA[<h3 id="一、图的术语和定义"><a href="#一、图的术语和定义" class="headerlink" title="一、图的术语和定义"></a>一、图的术语和定义</h3><ol>
+<li>无向图<ol>
+<li>无向图的边是无方向的</li>
+<li>树是连通的无回路的无向图<strong>（最后一个结点不会指向根结点）</strong></li>
+<li>树T有n个顶点，则<strong>必有n-1条边</strong></li>
+<li>无向图的边数&#x3D;各顶点的度之和的一半</li>
+</ol>
+</li>
+<li>有向图<ol>
+<li>有向图的边是有方向的</li>
+<li>多重图（哥尼斯堡七桥），简单图（不存在带环的图，同一条边不重复出现）</li>
+</ol>
+</li>
+<li>完全图<ol>
+<li>每个点都直接指向其他点，边最多</li>
+<li>完全无向图（最多的边）<ol>
+<li>任意两个顶点之间都存在边，则n个顶点有<em><em>n</em>(n-1)&#x2F;2</em>*条边</li>
+</ol>
+</li>
+<li>完全有向图（最多的边）<ol>
+<li>任意两个顶点之间存在方向互为相反的边，则n个顶点有*<em>n</em>(n-1)**条边</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>带权图（通常称为<strong>网</strong>）<ol>
+<li>图的边具有权值</li>
+</ol>
+</li>
+<li>稠密图<ol>
+<li>有很少条边的图</li>
+</ol>
+</li>
+<li>邻接顶点</li>
+<li>顶点的度<ol>
+<li>指与顶点关联的边数  | <strong>tips:与树的度定义不一样</strong><ol>
+<li>度为0称为孤立点</li>
+<li>度为1称为悬挂点</li>
+</ol>
+</li>
+<li>有向图<ol>
+<li>以结点i为<strong>起点</strong>的边数称为<strong>入度</strong></li>
+<li>以结点i为<strong>终点</strong>的边数称为<strong>出度</strong></li>
+</ol>
+</li>
+</ol>
+</li>
+<li>子图<ol>
+<li></li>
+</ol>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>csapp</category>
+      </categories>
+      <tags>
+        <tag>图</tag>
       </tags>
   </entry>
 </search>
