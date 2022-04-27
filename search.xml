@@ -362,7 +362,26 @@
   <entry>
     <title>高速缓存的概念</title>
     <url>/2022/04/25/%E9%AB%98%E9%80%9F%E7%BC%93%E5%AD%98/</url>
-    <content><![CDATA[<h3 id="一、什么是缓存"><a href="#一、什么是缓存" class="headerlink" title="一、什么是缓存"></a>一、什么是缓存</h3><blockquote>
+    <content><![CDATA[<h3 id="一、局部性"><a href="#一、局部性" class="headerlink" title="一、局部性"></a>一、局部性</h3><ol>
+<li>时间局部性<br>指的是被引用的内存位置，很可能在<strong>不远的将来再被多次引用</strong></li>
+<li>空间局部性<br>指的是被引用的内存位置，很可能在不远的将来引用<strong>附近的一个内存位置</strong></li>
+</ol>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">sumarrayrows</span><span class="params">(<span class="type">int</span> a [M][N])</span></span><br><span class="line">&#123;</span><br><span class="line">   <span class="type">int</span> i, j, sum = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; M; i++&gt;)</span><br><span class="line">      <span class="keyword">for</span>(j = <span class="number">0</span>; j &lt; N; j++&gt;)</span><br><span class="line">         sum += a[i][j];</span><br><span class="line">   <span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>这是一个具有良好局部性的程序，sum每次迭代都被引用，具有良好时间局部性，a[i][j]每次引用附近的元素（步长为1），具有良好空间局部性</p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">sumarrayrcols</span><span class="params">(<span class="type">int</span> a [M][N])</span></span><br><span class="line">&#123;</span><br><span class="line">   <span class="type">int</span> i, j, sum = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; N; j++&gt;)</span><br><span class="line">      <span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; M; i++&gt;)</span><br><span class="line">         sum += a[i][j];</span><br><span class="line">   <span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>这是空间局部性很差的程序，sum依然具有良好时间局部性，但是a[i][j]每次引用附近步长为N的元素，空间局部性很差</p>
+</blockquote>
+<ol start="3">
+<li>总结<blockquote>
+<p>1.重复引用相同变量的程序具有良好的时间局部性，如上面的sum这个变量<br>2.步长越小，空间局部性越好，步长大，跳来跳去的程序空间局部性很差<br>3.对于取指令来说，循环有好的时间和空间局部性，循环体越小，循环迭代次数越多，局部性越好</p>
+</blockquote>
+</li>
+</ol>
+<hr>
+<h3 id="二、什么是缓存"><a href="#二、什么是缓存" class="headerlink" title="二、什么是缓存"></a>二、什么是缓存</h3><blockquote>
 <p>缓存：内存的缓冲区域</p>
 </blockquote>
 <ol>
@@ -382,7 +401,9 @@
 </ol>
 </li>
 </ol>
-<h2 id=""><a href="#" class="headerlink" title=""></a><img src="/images/2022-04-25-23-17-15.png" alt="存储器层次结构" title="存储器层次结构"></h2><h3 id="二、缓存相关名词"><a href="#二、缓存相关名词" class="headerlink" title="二、缓存相关名词"></a>二、缓存相关名词</h3><p><em>当程序需要数据块10时</em>，有以下几种情况</p>
+<p><img src="/images/2022-04-25-23-17-15.png" alt="存储器层次结构" title="存储器层次结构"></p>
+<hr>
+<h3 id="三、缓存相关名词"><a href="#三、缓存相关名词" class="headerlink" title="三、缓存相关名词"></a>三、缓存相关名词</h3><p><em>当程序需要数据块10时</em>，有以下几种情况</p>
 <ol>
 <li><p>缓存命中</p>
 <ol>
@@ -437,15 +458,65 @@
     <content><![CDATA[<h3 id="一、高速缓存存储器组织结构"><a href="#一、高速缓存存储器组织结构" class="headerlink" title="一、高速缓存存储器组织结构"></a>一、高速缓存存储器组织结构</h3><blockquote>
 <p>CPU首先在缓存查找数据–&gt; L1 –&gt; L2 –&gt; L3 –&gt; 主存，这里我们假设，CPU和主存之间只有一个L1高速缓存</p>
 </blockquote>
-<p><img src="/images/2022-04-27-01-16-42.png"></p>
+<ol>
+<li><p>高速缓存存储器结构<br><img src="/images/2022-04-27-01-16-42.png"></p>
 <blockquote>
 <p>我们可以将高速缓存存储器视为有S &#x3D; 2^s个高速缓存组的数组。每个组包含E &#x3D; 2^e个高速缓存行。每个行是由一个B &#x3D; 2^b个字节的数据块组成的。</p>
 </blockquote>
-<p><img src="/images/2022-04-27-01-28-21.png"></p>
+</li>
+<li><p>高速缓存行结构<br><img src="/images/2022-04-27-01-28-21.png"></p>
 <blockquote>
-<p>高速缓存的大小（或容量）C指的是所有块的大小的和。标记位和有效位不包括在内 。因此，<strong>C&#x3D;S×E×B</strong>。</p>
+<p>高速缓存的大小（或容量）C指的是所有块的大小的和。<em><strong>标记位和有效位不包括在内</strong></em> 。因此，<strong>C&#x3D;S×E×B</strong>。</p>
 </blockquote>
-]]></content>
+</li>
+<li><p>地址位结构<br><img src="/images/2022-04-27-09-34-55.png"></p>
+<blockquote>
+<p>每个高速缓存存储器有m位，可以组成M &#x3D; 2^m个不同的地址，<strong>m &#x3D; t + s + b</strong></p>
+</blockquote>
+</li>
+<li><p>硬件读取高速缓存的过程<br><img src="/images/2022-04-27-22-28-27.png"></p>
+<blockquote>
+<p>判断是否发生命中</p>
+<ol>
+<li>组选择：通过<strong>组索引位</strong>找到对应组</li>
+<li>判断该组<strong>有效位是否为1</strong>，1为有效说明命中，0为无效说明不命中</li>
+<li>有效位为1，且<strong>高速缓存行标记位等于地址位中的标记位相匹配</strong>，说明目标的副本确实在这一行</li>
+</ol>
+</blockquote>
+</li>
+</ol>
+<blockquote>
+<p>如果缓存不命中，CPU会进行等待，高速缓存会向主存请求目标数据块，高速缓存会保存该数据块到行中，然后再取出目标数据块给CPU</p>
+</blockquote>
+<hr>
+<h3 id="二、直接映射高速内存"><a href="#二、直接映射高速内存" class="headerlink" title="二、直接映射高速内存"></a>二、直接映射高速内存</h3><ol>
+<li><p>直接映射高速缓存（E&#x3D;1），每组只有1行，假设高速缓存块有8字节<br><img src="/images/2022-04-27-23-09-01.png"></p>
+<blockquote>
+<p>上图显示了缓存命中时的字选择，如果缓存不命中，就需要从存储器的下一层取出目标块进行<strong>替换&#x2F;驱逐</strong></p>
+</blockquote>
+</li>
+<li><p>直接映射高速缓存的缺点：冲突不命中</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">float</span> <span class="title function_">dotprod</span><span class="params">(<span class="type">float</span> x[<span class="number">8</span>], <span class="type">float</span> y[<span class="number">8</span>])</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">float</span> sum = <span class="number">0.0</span>;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; <span class="number">8</span>; i++&gt;)</span><br><span class="line">        sum += x[i] * y[i];</span><br><span class="line">    <span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>这是一个具有良好局部性的程序，但是我们来研究一下它的命中率</p>
+</blockquote>
+</li>
+</ol>
+<p>假设浮点数是4个字节，x被加载到从地址0开始到32字节的连续内存中，y跟在后面，假设一个块是16字节，高速缓存由2个组组成，既（S,E,B,m）&#x3D; (2, 1, 16, 32)</p>
+<p><img src="/images/2022-04-28-00-41-38.png"></p>
+<blockquote>
+<p>可以看到，x0到x3和y0到y3，x4到x7和y4到y7都被映射到了同一组，说明在程序运行时，x和y会不断进行<strong>替换&#x2F;驱逐</strong>，命中率为0，这种冲突不命中称为<strong>抖动</strong><br>上述说明了即使程序本身有良好的空间局部性，高速缓存也有足够的空间，也是会导致冲突不命中的，因为我们需要引用的块被映射到同一个组</p>
+</blockquote>
+<p><em><strong>那么如何修正呢？</strong></em></p>
+<blockquote>
+<p>比如，将x定义为float x[12]，y依然跟在x后面，这里不写出x8到x11，此时图如下</p>
+</blockquote>
+<p><img src="/images/2022-04-28-00-59-51.png"></p>
+<blockquote>
+<p>可以看到，这样就消除了抖动，但是第一次加载时还是会有2次<strong>冷不命中</strong>，第一次替换时会有2次<strong>缓存不命中</strong>，所以命中率是十六分之十二，也就是四分之三</p>
+</blockquote>
+<hr>
+<h3 id="三、组相联高速内存"><a href="#三、组相联高速内存" class="headerlink" title="三、组相联高速内存"></a>三、组相联高速内存</h3><h3 id="四、全相联高速内存"><a href="#四、全相联高速内存" class="headerlink" title="四、全相联高速内存"></a>四、全相联高速内存</h3>]]></content>
       <categories>
         <category>csapp</category>
       </categories>
@@ -510,7 +581,7 @@
 </ol>
 ]]></content>
       <categories>
-        <category>csapp</category>
+        <category>数据结构</category>
       </categories>
       <tags>
         <tag>图</tag>
