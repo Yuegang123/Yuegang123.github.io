@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.1.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"yuegang123.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.11.0","exturl":false,"sidebar":{"position":"right","width":300,"display":"always","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="〇、基础概念 数据（DATA）  描述客户事物及其状态的符号记录（最原始的记录，未做加工）   数据库（DATABASE）DB  长期储存在计算机内，有组织的，可共享的大量数据的集合 无冗余性：现实最多有一份数据与之对应   数据库管理系统（DATABASE MANAGEMENT SYSTEM）DBMS  一种计算机应用软件程序，用于创建和管理数据；与用户、其他应用程序及数据库进行交互以获取，管理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据库基础">
+<meta property="og:url" content="https://yuegang123.github.io/2022/07/12/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:site_name" content="GGlietの记事本">
+<meta property="og:description" content="〇、基础概念 数据（DATA）  描述客户事物及其状态的符号记录（最原始的记录，未做加工）   数据库（DATABASE）DB  长期储存在计算机内，有组织的，可共享的大量数据的集合 无冗余性：现实最多有一份数据与之对应   数据库管理系统（DATABASE MANAGEMENT SYSTEM）DBMS  一种计算机应用软件程序，用于创建和管理数据；与用户、其他应用程序及数据库进行交互以获取，管理">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-07-12T03:00:00.000Z">
+<meta property="article:modified_time" content="2022-07-12T14:04:19.039Z">
+<meta property="article:author" content="ggliet">
+<meta property="article:tag" content="SQL语法">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://yuegang123.github.io/2022/07/12/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://yuegang123.github.io/2022/07/12/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/","path":"2022/07/12/数据库基础/","title":"数据库基础"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>数据库基础 | GGlietの记事本</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">GGlietの记事本</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Rage rage. against the dying of the light.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-首页"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-标签"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-分类"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-归档"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E3%80%87%E3%80%81%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">〇、基础概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%A6%82%E5%BF%B5%E6%A8%A1%E5%9E%8B%E8%AE%BE%E8%AE%A1E-R%E5%9B%BE"><span class="nav-number">2.</span> <span class="nav-text">一、概念模型设计E-R图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81sql%E7%BB%93%E6%9E%84%E5%8C%96%E8%AF%AD%E8%A8%80%E8%BF%9B%E8%A1%8C%E6%95%B0%E6%8D%AE%E5%BA%93%E3%80%81%E8%A1%A8%E8%AE%BE%E8%AE%A1"><span class="nav-number">3.</span> <span class="nav-text">二、sql结构化语言进行数据库、表设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81sql%E8%AF%AD%E6%B3%95"><span class="nav-number">4.</span> <span class="nav-text">三、sql语法</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="ggliet"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">ggliet</p>
+  <div class="site-description" itemprop="description">笔记|计算机知识|maybe生活分享</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">29</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">29</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://yuegang123.github.io/2022/07/12/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="ggliet">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="GGlietの记事本">
+      <meta itemprop="description" content="笔记|计算机知识|maybe生活分享">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="数据库基础 | GGlietの记事本">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          数据库基础
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-07-12 11:00:00 / 修改时间：22:04:19" itemprop="dateCreated datePublished" datetime="2022-07-12T11:00:00+08:00">2022-07-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4.6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h3 id="〇、基础概念"><a href="#〇、基础概念" class="headerlink" title="〇、基础概念"></a>〇、基础概念</h3><ul>
+<li><p>数据（DATA）</p>
+<ul>
+<li>描述客户事物及其状态的符号记录（最原始的记录，未做加工）</li>
+</ul>
+</li>
+<li><p>数据库（DATABASE）DB</p>
+<ul>
+<li>长期储存在计算机内，有组织的，可共享的大量数据的集合</li>
+<li>无冗余性：现实最多有一份数据与之对应</li>
+</ul>
+</li>
+<li><p>数据库管理系统（DATABASE MANAGEMENT SYSTEM）DBMS</p>
+<ul>
+<li>一种计算机应用软件程序，用于创建和管理数据；与用户、其他应用程序及数据库进行交互以获取，管理和分析数据</li>
+<li>有故障恢复机制</li>
+</ul>
+</li>
+<li><p>数据库系统（DATABASE SYSTEM）DBS</p>
+<ul>
+<li>包括5个部分<ul>
+<li>1.数据库<ul>
+<li>数据集合</li>
+</ul>
+</li>
+<li>2.数据库管理系统（核心）<ul>
+<li>负责数据库的规划，设计，协调，维护和管理</li>
+</ul>
+</li>
+<li>3.应用程序</li>
+<li>4.数据库管理员</li>
+<li>5.用户<ul>
+<li>应用程序开发人员<ul>
+<li>程序猿，编写程序通过DBMS发出SQL请求</li>
+</ul>
+</li>
+<li>最终用户<ul>
+<li>通过程序访问数据库</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>T-SQL（transact structured query langage）【结构化查询语言增强版】</p>
+<ul>
+<li>流程控制、存储过程、触发器、游标、函数</li>
+<li>T-SQL服务器端编程：提高代码可重用性、减轻客户端的负担、减少网络负担</li>
+<li>全局&#x2F;局部变量定义：DECLARE @@变量名 数据类型（长度）&#x2F;DECLARE @变量名 数据类型（长度）;</li>
+<li>赋初值：SET @变量名 &#x3D; 表达式;</li>
+<li>不能同时对多个变量进行赋值；</li>
+</ul>
+</li>
+<li><p>三范式</p>
+<ul>
+<li>1.列不可拆分</li>
+<li>2.唯一标识</li>
+<li>3.引用主键</li>
+</ul>
+</li>
+</ul>
+<h3 id="一、概念模型设计E-R图"><a href="#一、概念模型设计E-R图" class="headerlink" title="一、概念模型设计E-R图"></a>一、概念模型设计E-R图</h3><h3 id="二、sql结构化语言进行数据库、表设计"><a href="#二、sql结构化语言进行数据库、表设计" class="headerlink" title="二、sql结构化语言进行数据库、表设计"></a>二、sql结构化语言进行数据库、表设计</h3><p>1、按要求：创建数据库</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">	<span class="keyword">create</span> database qimo</span><br><span class="line"><span class="keyword">on</span> <span class="keyword">primary</span></span><br><span class="line">(</span><br><span class="line">  name <span class="operator">=</span> lianxi,            <span class="comment">--逻辑名</span></span><br><span class="line">  filename <span class="operator">=</span> <span class="string">&#x27;D:\软工综合\数据库原理\期末\qimolianxi.mdf&#x27;</span>,   <span class="comment">--路径及物理名</span></span><br><span class="line">  size <span class="operator">=</span> <span class="number">5</span>mb,</span><br><span class="line">  maxsize <span class="operator">=</span> unlimited,</span><br><span class="line">  filegrowth <span class="operator">=</span> <span class="number">10</span><span class="operator">%</span></span><br><span class="line">)</span><br><span class="line">log <span class="keyword">on</span></span><br><span class="line">(</span><br><span class="line">  name <span class="operator">=</span> lianxi_log,</span><br><span class="line">  filename <span class="operator">=</span> <span class="string">&#x27;D:\软工综合\数据库原理\期末\qimolianxi.ldf&#x27;</span>,</span><br><span class="line">  size <span class="operator">=</span> <span class="number">5</span>mb</span><br><span class="line">)</span><br><span class="line">  <span class="keyword">Drop</span> database qimo   <span class="comment">--删除数据库语句</span></span><br></pre></td></tr></table></figure>
+
+<p>2、按要求：创建数据表</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">	use qimo</span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> student</span><br><span class="line">(</span><br><span class="line">	s_id <span class="type">char</span>(<span class="number">12</span>) <span class="keyword">primary</span> key,</span><br><span class="line">	s_name <span class="type">char</span>(<span class="number">8</span>) <span class="keyword">not</span> <span class="keyword">null</span>,</span><br><span class="line">	s_sex <span class="type">char</span>(<span class="number">2</span>) <span class="keyword">not</span> <span class="keyword">null</span> <span class="keyword">check</span> (s_sex <span class="keyword">in</span>(<span class="string">&#x27;男&#x27;</span>,<span class="string">&#x27;女&#x27;</span>)),  <span class="comment">--check 范围,可以设置大于0或限定只能是什么</span></span><br><span class="line">	s_birth datetime <span class="keyword">not</span> <span class="keyword">null</span>,</span><br><span class="line">	s_addr <span class="type">varchar</span>(<span class="number">80</span>),</span><br><span class="line">	s_entrancetime datetime <span class="keyword">default</span> getdate(),  <span class="comment">--default 默认值，可以设置常数或系统时间函数</span></span><br><span class="line">	<span class="comment">--s_classid char(8) references class(classid), --references 外键，将class表中的classid作为外键，这里未创class表</span></span><br><span class="line">	                                             <span class="comment">--primary key(courseid,studentid),联合主键用法</span></span><br><span class="line">)</span><br><span class="line">   <span class="keyword">alter</span> <span class="keyword">table</span> student <span class="keyword">add</span> s_class <span class="type">char</span>(<span class="number">8</span>) <span class="keyword">not</span> <span class="keyword">null</span>  <span class="comment">--插入新列</span></span><br><span class="line">   <span class="keyword">drop</span> <span class="keyword">table</span> student     <span class="comment">--删除表</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="三、sql语法"><a href="#三、sql语法" class="headerlink" title="三、sql语法"></a>三、sql语法</h3><ul>
+<li><p>1、单表查询</p>
+<ul>
+<li><p>Order by:  按一个或多个属性列排序，ASC升序，DESC降序，默认升序</p>
+<ul>
+<li>&#96;&#96;&#96;sql<br>  Select * from student order by sdept,sbirthday DESC  –按系号升序排，同系的按生日降序排  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">* Top x :表示选择的行数</span><br><span class="line">  * ```sql</span><br><span class="line">      Select top 2 sno from student  --查询最前面2个学生学号信息</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>Distinct:取消重复的行</p>
+<ul>
+<li>&#96;&#96;&#96;sql<br>Select distinct sno from score<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">* 查询计算过的值：</span><br><span class="line">  * ```sql</span><br><span class="line">    数值类型：Select sname,2016-year(sbirthday) as sage from student   --输出名字和年龄（当前年份减出生年份）</span><br></pre></td></tr></table></figure></li>
+<li>&#96;&#96;&#96;sql<br>字符类型：select sname+ssex as name_sex from student   –王小二男<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">* 字符串函数：</span><br><span class="line">  * ```sql</span><br><span class="line">    datalength(‘abc’) 返回 3   --字符串长度</span><br></pre></td></tr></table></figure></li>
+<li>&#96;&#96;&#96;sql<br>Right&#x2F;left(‘张三丰’，1) 返回 “张”  –返回字符串最右&#x2F;左第N个字符<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">* 算数函数</span><br><span class="line">    * ```sql</span><br><span class="line">      power(3,2)返回 9</span><br><span class="line">      ```    </span><br><span class="line">    * ```sql</span><br><span class="line">      round(2.56789,2)返回 2.57  --返回小数点后第N位</span><br></pre></td></tr></table></figure>
+<ul>
+<li>&#96;&#96;&#96;sql<br>sqrt(2)返回 1.4142135623731   –返回X的平方根<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">* 日期函数</span><br><span class="line">  * ```sql</span><br><span class="line">    getdate() 返回当前日期</span><br><span class="line">    Year/Month/day（date_expr）获取date_expr的年份/月份/日期</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>聚集函数</p>
+<ul>
+<li>&#96;&#96;&#96;sql<br>count（<em>）<br>Select count(</em>) from student –查询学生总人数  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* ```sql</span><br><span class="line">  Sum(*)</span><br><span class="line">  Select sum(grade) from score --查询所有学生所有课程分数</span><br></pre></td></tr></table></figure></li>
+<li>&#96;&#96;&#96;sql<br>Avg(*)<br>Select avg(grade) from score  –计算学生所有课程的平均成绩<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> * ```sql</span><br><span class="line">Max/Min(*)</span><br><span class="line">Select max/min(grade) from student  --查询学生最高分数</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>Where条件查询</p>
+<ul>
+<li>&#96;&#96;&#96;sql<br>Between…and…<br>Select sname from student where sage not between 20 and 25;   –查询不是20到25岁之间的学生姓名<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> * ```sql  </span><br><span class="line">In</span><br><span class="line">Select sname from student where sdept not in (&#x27;IS&#x27;,&#x27;MA&#x27;,&#x27;CS&#x27;);  --查询既不是计算机系，也不是数学系，也不是信息系的学生姓名</span><br></pre></td></tr></table></figure></li>
+<li>&#96;&#96;&#96;sql<br>Like<br>%:代表任意长度的字符串<br>  Select sname,sno from  student where sname not like ‘刘%’   –查询不是姓刘的学生的姓名和学号<br>_:代表任意单个字符<br>  Select sname,sno from student where sname like ‘_阳%’  –查询名字第二个字是阳的学生的姓名和学号<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* ```sql</span><br><span class="line">  IS</span><br><span class="line">Select sno,cno from score where grade is not null   --查询分数不为空的学生的学号和课程号</span><br></pre></td></tr></table></figure></li>
+<li>&#96;&#96;&#96;sql<br>Not&gt;and&gt;or<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">* 2、分组查询</span><br><span class="line">  * Group by</span><br><span class="line">    * ```sql</span><br><span class="line">      select s_id,sum(s_score) from score group by s_id  --查询每个学生所有课程的总分</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>Having</p>
+<ul>
+<li>&#96;&#96;&#96;sql<br>Select s_id,sum(s_score) from score group by s_id having sum(s_score) &gt;&#x3D; 200   –查询所有课程的总分超过200分的学生<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">* 3、多表查询</span><br><span class="line">  * 等值连接略</span><br><span class="line">  * 非等值连接</span><br><span class="line">    * ```sql</span><br><span class="line">      Select a.yname, a.jxj, b.sno, b.cno, b.grade from jxj a, score b where b.grade between a.grade_min and a.grade_max     --从分数表的分数中查询符合奖学金不同奖项分数的学生获奖情况</span><br></pre></td></tr></table></figure></li>
+<li>&#96;&#96;&#96;sql<br>Select a.sno,a.sname from student a, score b where a.sno &#x3D; b.sno and b.cno &#x3D; ‘2’ and b.grade &gt; 90   –查询选修2号课程且分数大于90的学生学号和姓名<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* 自身连接</span><br><span class="line">  * ```sql</span><br><span class="line"> Select first.cno,second.cpno from course first,course second where first.cpno = second.cno  --查询每一门课的间接先修课</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>外连接</p>
+<ul>
+<li>&#96;&#96;&#96;sql<br>Join…on<br>表 Left join 表 on  –列出左边关系中的所有元组<br>表 right join 表 on  –列出右边关系中的所有元组<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* 多表连接</span><br><span class="line">  * ```sql</span><br><span class="line"> Select student.sno, sname, cname, grade from student, score, course where student.sno = score.sno and score.cno = course.cno    --查询每个学生的学号，姓名，选修的课程名及成绩</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>4、子查询</p>
+<ul>
+<li>集合查询<ul>
+<li>并（union）<ul>
+<li>&#96;&#96;&#96;sql<br>Select sno from score where cno &#x3D; 2 union all (select sno from score where cno &#x3D; 3)  –查询选修了课程号为2和3的学号  （没有all则去掉重复内容）<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* 交（intersect）</span><br><span class="line">     * ```sql</span><br><span class="line">	Select * from student where sex=&#x27;男&#x27; intersect select * from student where sdept=&#x27;CS&#x27;   --查询计算机系的男生的信息</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>差（except）【在第一个结果集中，但是不在第二个结果集】<ul>
+<li>&#96;&#96;&#96;sql<br>（select * from student where sdept !&#x3D;’CS’）except select * from student where sex &#x3D;’男’   –查询非计算机系的非男生信息<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">* 嵌套查询</span><br><span class="line">  * 子查询不能使用compute[by] 和 into子句</span><br><span class="line">  * 子查询的select语句不能使用image、text和ntext数据类型</span><br><span class="line">  * 带IN的嵌套查询</span><br><span class="line">    * ```sql</span><br><span class="line">      Select * from student where sdept in (select sdept from student where sname = &#x27;王敏&#x27;)   --查询与王敏同系的所有学生信息</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>带比较的<ul>
+<li>§ &gt;, &lt;  &#x3D;</li>
+</ul>
+</li>
+<li>带any 或 all 的嵌套查询<ul>
+<li>§ &lt;, &gt; ,&lt;&gt;  –不等于子查询中的任何一个值&#x2F;某个值</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>5、插入新记录</p>
+<ul>
+<li>&#96;&#96;&#96;sql<br>use qimo<br>insert into student values (‘101’,’王小二’,’男’,’2000-10-01’,’广东佛山狮山大道碧海湾2栋1001’,’’)<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">* 6、更新数据库数据</span><br><span class="line">  * ```sql</span><br><span class="line">    update student set s_entrancetime = &#x27;2022-01-05&#x27; where s_id = &#x27;101&#x27;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>7、删除特定数据</p>
+<ul>
+<li><pre><code class="sql">delete from student where s_id = &#39;101&#39;     --删除数据是以行为单位
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/SQL%E8%AF%AD%E6%B3%95/" rel="tag"><i class="fa fa-tag"></i> SQL语法</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/05/16/%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98%E8%AF%A6%E8%A7%A3/" rel="prev" title="虚拟内存">
+                  <i class="fa fa-chevron-left"></i> 虚拟内存
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/07/12/%E5%BC%82%E5%B8%B8%E7%9A%84%E6%8D%95%E8%8E%B7%E5%92%8C%E5%A4%84%E7%90%86/" rel="next" title="异常的捕获和处理">
+                  异常的捕获和处理 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ggliet</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">25k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">23 分钟</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

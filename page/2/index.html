@@ -156,18 +156,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">20</span>
+          <span class="site-state-item-count">29</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-count">29</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -196,6 +196,1133 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://yuegang123.github.io/2022/04/26/%E5%9B%BE%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="ggliet">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="GGlietの记事本">
+      <meta itemprop="description" content="笔记|计算机知识|maybe生活分享">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | GGlietの记事本">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/04/26/%E5%9B%BE%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" class="post-title-link" itemprop="url">图的基本概念</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-04-26 08:50:00" itemprop="dateCreated datePublished" datetime="2022-04-26T08:50:00+08:00">2022-04-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-04-27 21:30:02" itemprop="dateModified" datetime="2022-04-27T21:30:02+08:00">2022-04-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>353</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="一、图的术语和定义"><a href="#一、图的术语和定义" class="headerlink" title="一、图的术语和定义"></a>一、图的术语和定义</h3><ol>
+<li>无向图<ol>
+<li>无向图的边是无方向的</li>
+<li>树是连通的无回路的无向图<strong>（最后一个结点不会指向根结点）</strong></li>
+<li>树T有n个顶点，则<strong>必有n-1条边</strong></li>
+<li>无向图的边数&#x3D;各顶点的度之和的一半</li>
+</ol>
+</li>
+<li>有向图<ol>
+<li>有向图的边是有方向的</li>
+<li>多重图（哥尼斯堡七桥），简单图（不存在带环的图，同一条边不重复出现）</li>
+</ol>
+</li>
+<li>完全图<ol>
+<li>每个点都直接指向其他点，边最多</li>
+<li>完全无向图（最多的边）<ol>
+<li>任意两个顶点之间都存在边，则n个顶点有<em><em>n</em>(n-1)&#x2F;2</em>*条边</li>
+</ol>
+</li>
+<li>完全有向图（最多的边）<ol>
+<li>任意两个顶点之间存在方向互为相反的边，则n个顶点有*<em>n</em>(n-1)**条边</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>带权图（通常称为<strong>网</strong>）<ol>
+<li>图的边具有权值</li>
+</ol>
+</li>
+<li>稠密图<ol>
+<li>有很少条边的图</li>
+</ol>
+</li>
+<li>邻接顶点</li>
+<li>顶点的度<ol>
+<li>指与顶点关联的边数  | <strong>tips:与树的度定义不一样</strong><ol>
+<li>度为0称为孤立点</li>
+<li>度为1称为悬挂点</li>
+</ol>
+</li>
+<li>有向图<ol>
+<li>以结点i为<strong>起点</strong>的边数称为<strong>入度</strong></li>
+<li>以结点i为<strong>终点</strong>的边数称为<strong>出度</strong></li>
+</ol>
+</li>
+</ol>
+</li>
+<li>子图<ol>
+<li></li>
+</ol>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://yuegang123.github.io/2022/04/26/%E9%AB%98%E9%80%9F%E7%BC%93%E5%AD%982/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="ggliet">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="GGlietの记事本">
+      <meta itemprop="description" content="笔记|计算机知识|maybe生活分享">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | GGlietの记事本">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/04/26/%E9%AB%98%E9%80%9F%E7%BC%93%E5%AD%982/" class="post-title-link" itemprop="url">高速缓存存储器</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-04-26 01:43:00" itemprop="dateCreated datePublished" datetime="2022-04-26T01:43:00+08:00">2022-04-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-04-28 01:04:30" itemprop="dateModified" datetime="2022-04-28T01:04:30+08:00">2022-04-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/csapp/" itemprop="url" rel="index"><span itemprop="name">csapp</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="一、高速缓存存储器组织结构"><a href="#一、高速缓存存储器组织结构" class="headerlink" title="一、高速缓存存储器组织结构"></a>一、高速缓存存储器组织结构</h3><blockquote>
+<p>CPU首先在缓存查找数据–&gt; L1 –&gt; L2 –&gt; L3 –&gt; 主存，这里我们假设，CPU和主存之间只有一个L1高速缓存</p>
+</blockquote>
+<ol>
+<li><p>高速缓存存储器结构<br><img src="/images/2022-04-27-01-16-42.png"></p>
+<blockquote>
+<p>我们可以将高速缓存存储器视为有S &#x3D; 2^s个高速缓存组的数组。每个组包含E &#x3D; 2^e个高速缓存行。每个行是由一个B &#x3D; 2^b个字节的数据块组成的。</p>
+</blockquote>
+</li>
+<li><p>高速缓存行结构<br><img src="/images/2022-04-27-01-28-21.png"></p>
+<blockquote>
+<p>高速缓存的大小（或容量）C指的是所有块的大小的和。<em><strong>标记位和有效位不包括在内</strong></em> 。因此，<strong>C&#x3D;S×E×B</strong>。</p>
+</blockquote>
+</li>
+<li><p>地址位结构<br><img src="/images/2022-04-27-09-34-55.png"></p>
+<blockquote>
+<p>每个高速缓存存储器有m位，可以组成M &#x3D; 2^m个不同的地址，<strong>m &#x3D; t + s + b</strong></p>
+</blockquote>
+</li>
+<li><p>硬件读取高速缓存的过程<br><img src="/images/2022-04-27-22-28-27.png"></p>
+<blockquote>
+<p>判断是否发生命中</p>
+<ol>
+<li>组选择：通过<strong>组索引位</strong>找到对应组</li>
+<li>判断该组<strong>有效位是否为1</strong>，1为有效说明命中，0为无效说明不命中</li>
+<li>有效位为1，且<strong>高速缓存行标记位等于地址位中的标记位相匹配</strong>，说明目标的副本确实在这一行</li>
+</ol>
+</blockquote>
+</li>
+</ol>
+<blockquote>
+<p>如果缓存不命中，CPU会进行等待，高速缓存会向主存请求目标数据块，高速缓存会保存该数据块到行中，然后再取出目标数据块给CPU</p>
+</blockquote>
+<hr>
+<h3 id="二、直接映射高速内存"><a href="#二、直接映射高速内存" class="headerlink" title="二、直接映射高速内存"></a>二、直接映射高速内存</h3><ol>
+<li><p>直接映射高速缓存（E&#x3D;1），每组只有1行，假设高速缓存块有8字节<br><img src="/images/2022-04-27-23-09-01.png"></p>
+<blockquote>
+<p>上图显示了缓存命中时的字选择，如果缓存不命中，就需要从存储器的下一层取出目标块进行<strong>替换&#x2F;驱逐</strong></p>
+</blockquote>
+</li>
+<li><p>直接映射高速缓存的缺点：冲突不命中</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">float</span> <span class="title function_">dotprod</span><span class="params">(<span class="type">float</span> x[<span class="number">8</span>], <span class="type">float</span> y[<span class="number">8</span>])</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">float</span> sum = <span class="number">0.0</span>;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; <span class="number">8</span>; i++&gt;)</span><br><span class="line">        sum += x[i] * y[i];</span><br><span class="line">    <span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>这是一个具有良好局部性的程序，但是我们来研究一下它的命中率</p>
+</blockquote>
+</li>
+</ol>
+<p>假设浮点数是4个字节，x被加载到从地址0开始到32字节的连续内存中，y跟在后面，假设一个块是16字节，高速缓存由2个组组成，既（S,E,B,m）&#x3D; (2, 1, 16, 32)</p>
+<p><img src="/images/2022-04-28-00-41-38.png"></p>
+<blockquote>
+<p>可以看到，x0到x3和y0到y3，x4到x7和y4到y7都被映射到了同一组，说明在程序运行时，x和y会不断进行<strong>替换&#x2F;驱逐</strong>，命中率为0，这种冲突不命中称为<strong>抖动</strong><br>上述说明了即使程序本身有良好的空间局部性，高速缓存也有足够的空间，也是会导致冲突不命中的，因为我们需要引用的块被映射到同一个组</p>
+</blockquote>
+<p><em><strong>那么如何修正呢？</strong></em></p>
+<blockquote>
+<p>比如，将x定义为float x[12]，y依然跟在x后面，这里不写出x8到x11，此时图如下</p>
+</blockquote>
+<p><img src="/images/2022-04-28-00-59-51.png"></p>
+<blockquote>
+<p>可以看到，这样就消除了抖动，但是第一次加载时还是会有2次<strong>冷不命中</strong>，第一次替换时会有2次<strong>缓存不命中</strong>，所以命中率是十六分之十二，也就是四分之三</p>
+</blockquote>
+<hr>
+<h3 id="三、组相联高速内存"><a href="#三、组相联高速内存" class="headerlink" title="三、组相联高速内存"></a>三、组相联高速内存</h3><h3 id="四、全相联高速内存"><a href="#四、全相联高速内存" class="headerlink" title="四、全相联高速内存"></a>四、全相联高速内存</h3>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://yuegang123.github.io/2022/04/25/%E9%AB%98%E9%80%9F%E7%BC%93%E5%AD%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="ggliet">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="GGlietの记事本">
+      <meta itemprop="description" content="笔记|计算机知识|maybe生活分享">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | GGlietの记事本">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/04/25/%E9%AB%98%E9%80%9F%E7%BC%93%E5%AD%98/" class="post-title-link" itemprop="url">高速缓存的概念</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-04-25 22:55:54" itemprop="dateCreated datePublished" datetime="2022-04-25T22:55:54+08:00">2022-04-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-04-27 22:08:26" itemprop="dateModified" datetime="2022-04-27T22:08:26+08:00">2022-04-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/csapp/" itemprop="url" rel="index"><span itemprop="name">csapp</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="一、局部性"><a href="#一、局部性" class="headerlink" title="一、局部性"></a>一、局部性</h3><ol>
+<li>时间局部性<br>指的是被引用的内存位置，很可能在<strong>不远的将来再被多次引用</strong></li>
+<li>空间局部性<br>指的是被引用的内存位置，很可能在不远的将来引用<strong>附近的一个内存位置</strong></li>
+</ol>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">sumarrayrows</span><span class="params">(<span class="type">int</span> a [M][N])</span></span><br><span class="line">&#123;</span><br><span class="line">   <span class="type">int</span> i, j, sum = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; M; i++&gt;)</span><br><span class="line">      <span class="keyword">for</span>(j = <span class="number">0</span>; j &lt; N; j++&gt;)</span><br><span class="line">         sum += a[i][j];</span><br><span class="line">   <span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>这是一个具有良好局部性的程序，sum每次迭代都被引用，具有良好时间局部性，a[i][j]每次引用附近的元素（步长为1），具有良好空间局部性</p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">sumarrayrcols</span><span class="params">(<span class="type">int</span> a [M][N])</span></span><br><span class="line">&#123;</span><br><span class="line">   <span class="type">int</span> i, j, sum = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; N; j++&gt;)</span><br><span class="line">      <span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; M; i++&gt;)</span><br><span class="line">         sum += a[i][j];</span><br><span class="line">   <span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>这是空间局部性很差的程序，sum依然具有良好时间局部性，但是a[i][j]每次引用附近步长为N的元素，空间局部性很差</p>
+</blockquote>
+<ol start="3">
+<li>总结<blockquote>
+<p>1.重复引用相同变量的程序具有良好的时间局部性，如上面的sum这个变量<br>2.步长越小，空间局部性越好，步长大，跳来跳去的程序空间局部性很差<br>3.对于取指令来说，循环有好的时间和空间局部性，循环体越小，循环迭代次数越多，局部性越好</p>
+</blockquote>
+</li>
+</ol>
+<hr>
+<h3 id="二、什么是缓存"><a href="#二、什么是缓存" class="headerlink" title="二、什么是缓存"></a>二、什么是缓存</h3><blockquote>
+<p>缓存：内存的缓冲区域</p>
+</blockquote>
+<ol>
+<li>缓存的本质<ol>
+<li>和硬盘一样，<strong>存储数据和指令</strong></li>
+<li>区别在于<strong>读取速度的不同</strong></li>
+</ol>
+</li>
+</ol>
+<blockquote>
+<p>问：为什么需要缓存？<br>答：程序存储在内存但每次从内存中取出指令需要10万个时钟周期，造成资源浪费，所以引出缓存这个东西</p>
+</blockquote>
+<ol start="2">
+<li>缓存的作用<ol>
+<li>在CPU和内存之间添加缓存</li>
+<li>容量小，只用来存储CPU执行常用的指令</li>
+</ol>
+</li>
+</ol>
+<p><img src="/images/2022-04-25-23-17-15.png" alt="存储器层次结构" title="存储器层次结构"></p>
+<hr>
+<h3 id="三、缓存相关名词"><a href="#三、缓存相关名词" class="headerlink" title="三、缓存相关名词"></a>三、缓存相关名词</h3><p><em>当程序需要数据块10时</em>，有以下几种情况</p>
+<ol>
+<li><p>缓存命中</p>
+<ol>
+<li>缓存中有数据块10，则<strong>直接返回给CPU</strong>，这叫做<strong>缓存命中</strong><br><img src="/images/2022-04-27-00-26-36.png"></li>
+</ol>
+</li>
+<li><p>缓存不命中</p>
+<ol>
+<li><p>缓存行（k层）中有数据块，但没有10，这叫做<strong>缓存不命中</strong>，此时缓存从下一层（k+1层）中复制数据块到缓存行中替换一个现有的数据块（如果k+1没有就继续往下一层找），并保持在那里，等待稍后的访问</p>
+<blockquote>
+<p><strong>最近最少被使用替换策略（LRU）</strong>，会选择很长时间都没有或很少使用的块，可以思考下LRU是怎么实现的<br><img src="/images/2022-04-27-00-35-48.png"></p>
+</blockquote>
+</li>
+<li><p>缓存行（k层）中为空，这叫做<strong>冷不命中</strong>，从下一层中复制数据块到缓存行</p>
+<blockquote>
+<p>那么从下一层中取出的块放在哪呢？<br>答：<strong>放置策略</strong>，最常用的是第k+1层的块i必须放在第k层的块（i mod 4）中。比如，第k+1层的0,4,8,12会映射到第k层的块0。块1,5,9,13会映射到块1。<br><img src="/images/2022-04-27-00-48-29.png"></p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><p>冲突不命中</p>
+<ol>
+<li><p>上述的放置策略会引起一个问题，就是<strong>冲突不命中</strong></p>
+<blockquote>
+<p>1.首先0，4，8，12都是映射到块0的<br>2.如果我请求块0，然后第一次不命中，然后将0放置到块0上<br>3.然后我请求块4，然后第二次不命中，因为4和0映射到同一个块上，4会替换0<br>4.然后我再请求0，这时发生第三次不命中，因为块0现在是4，这时0又会替换4</p>
+</blockquote>
+</li>
+<li><p>即使缓存总共可以容纳4个块甚至更多，但因为0，4，8，12被映射到同一个块，它不能分散去其他块，如果我请求的都是这个块里的对象，就会产生冲突，因为会每次都不命中，它只在一个缓存块里替换、使用</p>
+</li>
+</ol>
+</li>
+<li><p>容量不命中</p>
+<ol>
+<li>工作集的大小超过缓存大小时，缓存会经历<strong>容量不命中</strong><blockquote>
+<p>缓存太小了，不能处理这个工作集</p>
+</blockquote>
+</li>
+</ol>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://yuegang123.github.io/2022/04/23/%E5%BC%82%E5%B8%B8%E6%8E%A7%E5%88%B6%E6%B5%81/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="ggliet">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="GGlietの记事本">
+      <meta itemprop="description" content="笔记|计算机知识|maybe生活分享">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | GGlietの记事本">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/04/23/%E5%BC%82%E5%B8%B8%E6%8E%A7%E5%88%B6%E6%B5%81/" class="post-title-link" itemprop="url">异常的发生过程</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-04-23 16:32:00 / 修改时间：14:55:15" itemprop="dateCreated datePublished" datetime="2022-04-23T16:32:00+08:00">2022-04-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/csapp/" itemprop="url" rel="index"><span itemprop="name">csapp</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <blockquote>
+<p>CPU的组成，其中RIP指令寄存器存放下一条执行的指令</p>
+</blockquote>
+<p><img src="/images/2022-04-23-10-57-43.png"></p>
+<h3 id="1-下面是一个异常的发生过程图示"><a href="#1-下面是一个异常的发生过程图示" class="headerlink" title="1. 下面是一个异常的发生过程图示"></a>1. 下面是一个异常的发生过程图示</h3><p><img src="/images/1.png"></p>
+<blockquote>
+<p>异常表（exception table）<strong>【存放在DRAM，只可读】</strong>就像一个字典一样，标记[0]是发生什么事情，[1]是发生什么事情…..，比如说[0]是除0了，发生异常之后往哪里跳转，需要查这个表，CPU告诉我们RIP要去查表了，看跳转到哪里，RIP就会跳转到内核的目标位置向上执行</p>
+</blockquote>
+<blockquote>
+<p>下条指令本来是希望指向I4, 由于发生page fault<strong>【页表没法查询到这个东西】</strong>，%RIP跳转到内核态，这时RIP不是指向下条指令，这时称发生了异常</p>
+</blockquote>
+<blockquote>
+<p>ISA：call，ret，jump系列<strong>【都是跳转，都是用户态指令，始终在.text段，或者其他共享库的.text段去跳，它不会超过kernel和user的上限，而异常不一样，异常是从用户态转到内核态】</strong></p>
+</blockquote>
+<hr>
+<h3 id="2-下面展示发生控制转移的过程"><a href="#2-下面展示发生控制转移的过程" class="headerlink" title="2. 下面展示发生控制转移的过程"></a>2. 下面展示发生控制转移的过程</h3><p>   <img src="/images/2022-04-23-12-04-14.png"></p>
+<blockquote>
+<p>可以发现，和正常的用户态跳转指令是不一样的，<strong>主要是从用户态到内核态的转变</strong></p>
+</blockquote>
+<hr>
+<h3 id="3-CPU的执行过程"><a href="#3-CPU的执行过程" class="headerlink" title="3. CPU的执行过程"></a>3. CPU的执行过程</h3><blockquote>
+<ol>
+<li><strong>取址</strong>，从RIP取址，因为RIP是va（虚拟地址），通过MMU换算成pa（物理地址），pa去查cache，L1如果命中了，就传回指令，如果不命中，就去查主存</li>
+<li><strong>译码</strong>，ALU（算数逻辑单元）去Decode，比如将 48 89 d3 转换成 mov %rdx,%rbx</li>
+<li><strong>执行</strong>，Execute：CPU在寄存器组，将rbx内的东西放到rdx</li>
+<li><strong>访存</strong>，Memory：指令如果有[]，会进行内存访问，经过内存总线，首先访问datacache，L1-&gt;L2-&gt;L3-&gt;DRAM</li>
+<li><strong>写回</strong>，Write：写回给寄存器</li>
+</ol>
+</blockquote>
+<p><img src="/images/2022-04-23-13-10-31.png"></p>
+<blockquote>
+<p>如果第一条指令的E希望发生一个系统调用，就会比如把中断控制器设置的某个位设置为1，CPU在执行下条指令之前去检查中断控制器，有个位是1，就知道是要发生系统调用&#x2F;异常&#x2F;缺页等等，这个时候就不会去执行下条指令，这个时候控制发生转移</p>
+</blockquote>
+<blockquote>
+<p><strong>同步异常</strong>：返回给可能当前指令【故障】，或总是下条指令【陷阱】，或终止被中断的程序，不会返回【终止】<br>    1. 故障【fault】：mov指令出问题，div by zero<br>    2. 陷阱【trap】：主动执行int，syscall指令，iret指令<br>    3. 终止【abort】：直接挂掉，比如直接访问null</p>
+</blockquote>
+<blockquote>
+<p><strong>异步异常</strong>：还有一种是来自I&#x2F;O设备的异步异常【中断】，它是<strong>和上条指令没有关系的</strong>，所以<strong>总是返回到下一条指令</strong><br>可能来自I&#x2F;O的操作：鼠标，键盘，磁盘，网络传过来的数据发生异常等等</p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://yuegang123.github.io/2022/04/21/%E7%B3%BB%E7%BB%9F%E7%BA%A7IO/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="ggliet">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="GGlietの记事本">
+      <meta itemprop="description" content="笔记|计算机知识|maybe生活分享">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | GGlietの记事本">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/04/21/%E7%B3%BB%E7%BB%9F%E7%BA%A7IO/" class="post-title-link" itemprop="url">系统级I/O</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-04-21 16:32:00" itemprop="dateCreated datePublished" datetime="2022-04-21T16:32:00+08:00">2022-04-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-04-22 18:24:35" itemprop="dateModified" datetime="2022-04-22T18:24:35+08:00">2022-04-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/csapp/" itemprop="url" rel="index"><span itemprop="name">csapp</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>71</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="一、UNIT-I-x2F-O"><a href="#一、UNIT-I-x2F-O" class="headerlink" title="一、UNIT I&#x2F;O"></a>一、UNIT I&#x2F;O</h2><p>不带缓存，直接操作<br>网络通信和信号处理程序输出【标准C库不能做】</p>
+<ol>
+<li>open</li>
+</ol>
+<h2 id="二、标准C库I-x2F-O"><a href="#二、标准C库I-x2F-O" class="headerlink" title="二、标准C库I&#x2F;O"></a>二、标准C库I&#x2F;O</h2><p>带缓存</p>
+<ol>
+<li>fopen</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://yuegang123.github.io/2022/04/19/%E7%AE%97%E6%B3%95%E5%AE%9A%E4%B9%89%E5%8F%8A%E5%A4%8D%E6%9D%82%E5%BA%A6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="ggliet">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="GGlietの记事本">
+      <meta itemprop="description" content="笔记|计算机知识|maybe生活分享">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | GGlietの记事本">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/04/19/%E7%AE%97%E6%B3%95%E5%AE%9A%E4%B9%89%E5%8F%8A%E5%A4%8D%E6%9D%82%E5%BA%A6/" class="post-title-link" itemprop="url">算法定义及复杂度</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-04-19 16:56:00" itemprop="dateCreated datePublished" datetime="2022-04-19T16:56:00+08:00">2022-04-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-04-20 09:10:56" itemprop="dateModified" datetime="2022-04-20T09:10:56+08:00">2022-04-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>0</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://yuegang123.github.io/2022/04/19/%E7%BA%BF%E6%80%A7%E8%A1%A8-%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="ggliet">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="GGlietの记事本">
+      <meta itemprop="description" content="笔记|计算机知识|maybe生活分享">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | GGlietの记事本">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/04/19/%E7%BA%BF%E6%80%A7%E8%A1%A8-%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" class="post-title-link" itemprop="url">双向链表的基本概念</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-04-19 16:55:00" itemprop="dateCreated datePublished" datetime="2022-04-19T16:55:00+08:00">2022-04-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-04-20 09:13:05" itemprop="dateModified" datetime="2022-04-20T09:13:05+08:00">2022-04-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>0</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://yuegang123.github.io/2022/04/19/%E7%BA%BF%E6%80%A7%E8%A1%A8-%E5%BE%AA%E7%8E%AF%E9%93%BE%E8%A1%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="ggliet">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="GGlietの记事本">
+      <meta itemprop="description" content="笔记|计算机知识|maybe生活分享">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | GGlietの记事本">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/04/19/%E7%BA%BF%E6%80%A7%E8%A1%A8-%E5%BE%AA%E7%8E%AF%E9%93%BE%E8%A1%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" class="post-title-link" itemprop="url">循环链表的基本概念</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-04-19 16:54:00" itemprop="dateCreated datePublished" datetime="2022-04-19T16:54:00+08:00">2022-04-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-04-20 09:40:37" itemprop="dateModified" datetime="2022-04-20T09:40:37+08:00">2022-04-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>0</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://yuegang123.github.io/2022/04/19/%E7%BA%BF%E6%80%A7%E8%A1%A8-%E9%9D%99%E6%80%81%E9%93%BE%E8%A1%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="ggliet">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="GGlietの记事本">
+      <meta itemprop="description" content="笔记|计算机知识|maybe生活分享">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | GGlietの记事本">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/04/19/%E7%BA%BF%E6%80%A7%E8%A1%A8-%E9%9D%99%E6%80%81%E9%93%BE%E8%A1%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" class="post-title-link" itemprop="url">静态链表的基本概念</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-04-19 16:51:00" itemprop="dateCreated datePublished" datetime="2022-04-19T16:51:00+08:00">2022-04-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-04-20 09:11:53" itemprop="dateModified" datetime="2022-04-20T09:11:53+08:00">2022-04-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>0</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -296,1027 +1423,8 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://yuegang123.github.io/2022/04/19/%E7%BA%BF%E6%80%A7%E8%A1%A8-%E6%95%B0%E7%BB%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="ggliet">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="GGlietの记事本">
-      <meta itemprop="description" content="笔记|计算机知识|maybe生活分享">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | GGlietの记事本">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/04/19/%E7%BA%BF%E6%80%A7%E8%A1%A8-%E6%95%B0%E7%BB%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" class="post-title-link" itemprop="url">数组的基本概念</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-04-19 16:46:00" itemprop="dateCreated datePublished" datetime="2022-04-19T16:46:00+08:00">2022-04-19</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-04-20 09:12:45" itemprop="dateModified" datetime="2022-04-20T09:12:45+08:00">2022-04-20</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>0</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://yuegang123.github.io/2022/04/19/KMP%E7%AE%97%E6%B3%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="ggliet">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="GGlietの记事本">
-      <meta itemprop="description" content="笔记|计算机知识|maybe生活分享">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | GGlietの记事本">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/04/19/KMP%E7%AE%97%E6%B3%95/" class="post-title-link" itemprop="url">KMP算法</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-04-19 16:44:00" itemprop="dateCreated datePublished" datetime="2022-04-19T16:44:00+08:00">2022-04-19</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-04-20 09:13:44" itemprop="dateModified" datetime="2022-04-20T09:13:44+08:00">2022-04-20</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>0</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://yuegang123.github.io/2022/04/19/%E5%90%8E%E7%BC%80%E8%A1%A8%E7%A4%BA%E6%B3%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="ggliet">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="GGlietの记事本">
-      <meta itemprop="description" content="笔记|计算机知识|maybe生活分享">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | GGlietの记事本">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/04/19/%E5%90%8E%E7%BC%80%E8%A1%A8%E7%A4%BA%E6%B3%95/" class="post-title-link" itemprop="url">后缀表示法（逆波兰）</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-04-19 16:44:00" itemprop="dateCreated datePublished" datetime="2022-04-19T16:44:00+08:00">2022-04-19</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-04-20 09:10:50" itemprop="dateModified" datetime="2022-04-20T09:10:50+08:00">2022-04-20</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>0</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://yuegang123.github.io/2022/04/19/%E6%A0%88%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="ggliet">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="GGlietの记事本">
-      <meta itemprop="description" content="笔记|计算机知识|maybe生活分享">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | GGlietの记事本">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/04/19/%E6%A0%88%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" class="post-title-link" itemprop="url">栈的基本概念</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-04-19 16:44:00" itemprop="dateCreated datePublished" datetime="2022-04-19T16:44:00+08:00">2022-04-19</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-04-20 09:13:24" itemprop="dateModified" datetime="2022-04-20T09:13:24+08:00">2022-04-20</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>0</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://yuegang123.github.io/2022/04/19/%E9%98%9F%E5%88%97%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="ggliet">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="GGlietの记事本">
-      <meta itemprop="description" content="笔记|计算机知识|maybe生活分享">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | GGlietの记事本">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/04/19/%E9%98%9F%E5%88%97%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" class="post-title-link" itemprop="url">队列的基本概念</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-04-19 16:43:00" itemprop="dateCreated datePublished" datetime="2022-04-19T16:43:00+08:00">2022-04-19</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-04-20 09:14:24" itemprop="dateModified" datetime="2022-04-20T09:14:24+08:00">2022-04-20</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>0</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://yuegang123.github.io/2022/04/19/%E8%B5%AB%E5%A4%AB%E6%9B%BC%E6%A0%91/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="ggliet">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="GGlietの记事本">
-      <meta itemprop="description" content="笔记|计算机知识|maybe生活分享">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | GGlietの记事本">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/04/19/%E8%B5%AB%E5%A4%AB%E6%9B%BC%E6%A0%91/" class="post-title-link" itemprop="url">赫夫曼树</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-04-19 16:32:00" itemprop="dateCreated datePublished" datetime="2022-04-19T16:32:00+08:00">2022-04-19</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-04-20 11:35:22" itemprop="dateModified" datetime="2022-04-20T11:35:22+08:00">2022-04-20</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>35</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="一、赫夫曼树的定义"><a href="#一、赫夫曼树的定义" class="headerlink" title="一、赫夫曼树的定义"></a>一、赫夫曼树的定义</h2><blockquote>
-<p>没有度为1的结点，只有度为0或2的结点</p>
-</blockquote>
-<hr>
-<h2 id="二、赫夫曼编码"><a href="#二、赫夫曼编码" class="headerlink" title="二、赫夫曼编码"></a>二、赫夫曼编码</h2>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://yuegang123.github.io/2022/04/19/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="ggliet">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="GGlietの记事本">
-      <meta itemprop="description" content="笔记|计算机知识|maybe生活分享">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | GGlietの记事本">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/04/19/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" class="post-title-link" itemprop="url">二叉树的基本概念</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-04-19 12:38:00" itemprop="dateCreated datePublished" datetime="2022-04-19T12:38:00+08:00">2022-04-19</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-04-20 09:12:06" itemprop="dateModified" datetime="2022-04-20T09:12:06+08:00">2022-04-20</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>71</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="一、二叉树的定义"><a href="#一、二叉树的定义" class="headerlink" title="一、二叉树的定义"></a>一、二叉树的定义</h2><ol>
-<li>一般二叉树</li>
-<li>完全二叉树</li>
-</ol>
-<hr>
-<h2 id="二、二叉树的性质"><a href="#二、二叉树的性质" class="headerlink" title="二、二叉树的性质"></a>二、二叉树的性质</h2><hr>
-<h2 id="三、二叉树的存储结构"><a href="#三、二叉树的存储结构" class="headerlink" title="三、二叉树的存储结构"></a>三、二叉树的存储结构</h2><hr>
-<h2 id="四、二叉树的遍历"><a href="#四、二叉树的遍历" class="headerlink" title="四、二叉树的遍历"></a>四、二叉树的遍历</h2><ol>
-<li>前序遍历</li>
-<li>中序遍历</li>
-<li>后序遍历</li>
-</ol>
-<hr>
-<h2 id="五、二叉树的建立"><a href="#五、二叉树的建立" class="headerlink" title="五、二叉树的建立"></a>五、二叉树的建立</h2><hr>
-<h2 id="六、线索二叉树"><a href="#六、线索二叉树" class="headerlink" title="六、线索二叉树"></a>六、线索二叉树</h2><hr>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://yuegang123.github.io/2022/04/17/%E6%A0%91%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="ggliet">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="GGlietの记事本">
-      <meta itemprop="description" content="笔记|计算机知识|maybe生活分享">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | GGlietの记事本">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/04/17/%E6%A0%91%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" class="post-title-link" itemprop="url">树基本概念</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-04-17 23:40:00" itemprop="dateCreated datePublished" datetime="2022-04-17T23:40:00+08:00">2022-04-17</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-04-20 09:11:59" itemprop="dateModified" datetime="2022-04-20T09:11:59+08:00">2022-04-20</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>192</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="一、树的定义"><a href="#一、树的定义" class="headerlink" title="一、树的定义"></a>一、树的定义</h2><ol>
-<li><p>树（Tree）是n个结点的有限集，n&#x3D;0时为空树，n&gt;0时，有且只有一个根结点（Root），其它结点为根的子树。</p>
-<blockquote>
-<p><strong>n&gt;0时根是唯一的</strong><br><strong>子树互不相交</strong><br><strong>非线性结构</strong></p>
-</blockquote>
-</li>
-<li><p>数的基本术语</p>
-<ol>
-<li>结点的度</li>
-<li>结点之间的关系</li>
-<li>结点的层次</li>
-</ol>
-</li>
-</ol>
-<hr>
-<h2 id="二、数的存储结构"><a href="#二、数的存储结构" class="headerlink" title="二、数的存储结构"></a>二、数的存储结构</h2><ol>
-<li>双亲表示法</li>
-<li>孩子表示法</li>
-<li>孩子兄弟表示法</li>
-</ol>
-<hr>
-<h2 id="三、树、森林、二叉树的转换"><a href="#三、树、森林、二叉树的转换" class="headerlink" title="三、树、森林、二叉树的转换"></a>三、树、森林、二叉树的转换</h2><ol>
-<li>数转换为二叉树</li>
-<li>森林转换为二叉树</li>
-<li>二叉树转换为树</li>
-<li>二叉树转换为森林</li>
-</ol>
-<hr>
-<h2 id="四、树与森林的遍历"><a href="#四、树与森林的遍历" class="headerlink" title="四、树与森林的遍历"></a>四、树与森林的遍历</h2>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://yuegang123.github.io/2022/04/16/MarkDown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="ggliet">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="GGlietの记事本">
-      <meta itemprop="description" content="笔记|计算机知识|maybe生活分享">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | GGlietの记事本">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/04/16/MarkDown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" class="post-title-link" itemprop="url">MarkDown基础语法</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-04-16 23:40:44" itemprop="dateCreated datePublished" datetime="2022-04-16T23:40:44+08:00">2022-04-16</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-04-20 09:14:09" itemprop="dateModified" datetime="2022-04-20T09:14:09+08:00">2022-04-20</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%85%B6%E5%AE%83/" itemprop="url" rel="index"><span itemprop="name">其它</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>934</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="一、标题"><a href="#一、标题" class="headerlink" title="一、标题"></a>一、标题</h2><p>1、第一种是使用#表示标题，其中#号必须在行首</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">#### 四级标题</span><br><span class="line">##### 五级标题</span><br><span class="line">###### 六级标题</span><br></pre></td></tr></table></figure>
-<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><p>2、第二种是使用&#x3D;&#x3D;&#x3D;或者—表示</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">一级标题</span><br><span class="line">===</span><br><span class="line">二级标题</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-<h1 id="一级标题-1"><a href="#一级标题-1" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题-1"><a href="#二级标题-1" class="headerlink" title="二级标题"></a>二级标题</h2><hr>
-<h2 id="二、分割线"><a href="#二、分割线" class="headerlink" title="二、分割线"></a>二、分割线</h2><p>使用三个或以上的-或*表示，且这行只有符号</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">--------</span><br><span class="line">********</span><br></pre></td></tr></table></figure>
-<hr>
-<hr>
-<h2 id="三、斜体和粗体和引用"><a href="#三、斜体和粗体和引用" class="headerlink" title="三、斜体和粗体和引用"></a>三、斜体和粗体和引用</h2><p>使用 * 和 ** 分别表示斜体和粗体，删除线使用两个 ~ 表示<br>引用用&gt;表示</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">*斜体* **粗体** ***又斜又粗***</span><br><span class="line">~~删除文字~~ </span><br><span class="line">&gt; a secret makes a woman woman  --贝尔摩德</span><br></pre></td></tr></table></figure>
-<p><em>斜体</em> <strong>粗体</strong> <em><strong>又斜又粗</strong></em><br><del>删除文字</del> </p>
-<blockquote>
-<p>a secret makes a woman woman  –贝尔摩德</p>
-</blockquote>
-<hr>
-<h2 id="四、列表"><a href="#四、列表" class="headerlink" title="四、列表"></a>四、列表</h2><p>无序表：使用* 表示一级，缩进后表示二级<br>有序表：标注好1. 、2. 、3. 就可以显示</p>
-<blockquote>
-<p>注意后面都有个空格</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">* 一级列表</span><br><span class="line">    * 二级列表</span><br><span class="line">    * 二级列表</span><br><span class="line">        * 三级列表</span><br><span class="line"></span><br><span class="line">1. 一层</span><br><span class="line">    1. 二层</span><br><span class="line">    2. 二层</span><br><span class="line">2. 一层</span><br></pre></td></tr></table></figure>
-<ul>
-<li>一级列表<ul>
-<li>二级列表</li>
-<li>二级列表<ul>
-<li>三级列表</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<ol>
-<li>一层<ol>
-<li>二层</li>
-<li>二层</li>
-</ol>
-</li>
-<li>一层</li>
-</ol>
-<hr>
-<h2 id="五、代码块"><a href="#五、代码块" class="headerlink" title="五、代码块"></a>五、代码块</h2><p>用&#96;表示<br>有些字符需要用\进行转义</p>
-<blockquote>
-<p>后面加java,cpp,c等可以有代码高亮,如&#96;&#96;&#96;java</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">HelloWorld</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Hello world&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="六、表格"><a href="#六、表格" class="headerlink" title="六、表格"></a>六、表格</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">|商品|数量|单价|</span><br><span class="line">|---|---:|:---:|</span><br><span class="line">|苹果|10|\$1|</span><br><span class="line">|电脑|1|\$10000|</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>表格符只能在第二行</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th>商品</th>
-<th align="right">数量</th>
-<th align="center">单价</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>苹果</td>
-<td align="right">10</td>
-<td align="center">$1</td>
-</tr>
-<tr>
-<td>电脑</td>
-<td align="right">1</td>
-<td align="center">$10000</td>
-</tr>
-</tbody></table>
-<hr>
-<h2 id="七、超链接和图片"><a href="#七、超链接和图片" class="headerlink" title="七、超链接和图片"></a>七、超链接和图片</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![柯南](/images/conan.jpg &quot;柯南&quot;)</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>图片alt就是显示在图片下面的文字，相当于对图片内容的解释。<br>图片title是图片的标题，当鼠标移到图片上时显示的内容。title可加可不加</p>
-</blockquote>
-<p><img src="/images/conan.jpg" alt="柯南&amp;新一？" title="柯南"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[哔哩哔哩](https://www.bilibili.com/ &quot;b站&quot;)</span><br></pre></td></tr></table></figure>
-
-<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/" title="b站">哔哩哔哩</a></p>
-<blockquote>
-<p>title可加可不加</p>
-</blockquote>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 </div>
@@ -1339,13 +1447,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">14k</span>
+    <span title="站点总字数">25k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">13 分钟</span>
+    <span title="站点阅读时长">23 分钟</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
