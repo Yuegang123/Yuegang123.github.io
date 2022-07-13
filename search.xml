@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Android布局</title>
-    <url>/2022/05/16/Android%E5%B8%83%E5%B1%80/</url>
-    <content><![CDATA[<p>一般在根布局文件中会出现 tools：context &#x3D; 某个activity名称。<br>这个属性的意思是：如果你在AndroidManifest.xml文件中为某个activity设置了Theme样式，那么，一般情况下，你在layout布局里面是无法直接看到这个效果的。因为一份layout布局可以提供给很多个activity用，layout无法知道自己提供给了哪个activity，而这个activity又设置了怎样的样式。所以，我们要为layout设置这样一个属性，来告诉layout当前提供给了哪个activity使用，从而实时显示这个activity所设置的样式效果（如果有）。也就是，layout —-&gt;   activity —-&gt;Theme，建立起了链接。否则，即使你为activity设置了样式，你的layout布局文件也是不知道的。</p>
-]]></content>
-      <categories>
-        <category>Android</category>
-      </categories>
-      <tags>
-        <tag>Android布局</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Activity基本使用</title>
     <url>/2022/05/16/Activity%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<p>在res下的AndroidMainfest.xml中</p>
@@ -44,6 +32,29 @@
       </categories>
       <tags>
         <tag>Android控件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Android布局</title>
+    <url>/2022/05/16/Android%E5%B8%83%E5%B1%80/</url>
+    <content><![CDATA[<p>一般在根布局文件中会出现 tools：context &#x3D; 某个activity名称。<br>这个属性的意思是：如果你在AndroidManifest.xml文件中为某个activity设置了Theme样式，那么，一般情况下，你在layout布局里面是无法直接看到这个效果的。因为一份layout布局可以提供给很多个activity用，layout无法知道自己提供给了哪个activity，而这个activity又设置了怎样的样式。所以，我们要为layout设置这样一个属性，来告诉layout当前提供给了哪个activity使用，从而实时显示这个activity所设置的样式效果（如果有）。也就是，layout —-&gt;   activity —-&gt;Theme，建立起了链接。否则，即使你为activity设置了样式，你的layout布局文件也是不知道的。</p>
+]]></content>
+      <categories>
+        <category>Android</category>
+      </categories>
+      <tags>
+        <tag>Android布局</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>KMP算法</title>
+    <url>/2022/04/19/KMP%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>字符串</tag>
       </tags>
   </entry>
   <entry>
@@ -137,14 +148,17 @@
       </tags>
   </entry>
   <entry>
-    <title>KMP算法</title>
-    <url>/2022/04/19/KMP%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[]]></content>
+    <title>MyBatis</title>
+    <url>/2022/07/12/MyBatis/</url>
+    <content><![CDATA[<p>对JDBC连接数据库等操作进行一些封装，使用户可以专注在DDL、DQL、DML上，不用处理例如注册驱动、创建connection、创建statement、手动设置参数、结果集检索等</p>
+<p>一、基本使用<br>1.引入依赖，驱动和包<br><a href="https://mvnrepository.com/">可通过该链接查询</a><br>2.开发持久化类，比如Customer类<br>3.配置mybatis-config.xml全局文件（连接信息）<br><a href="https://mybatis.net.cn/getting-started.html">可通过该链接查询</a></p>
+]]></content>
       <categories>
-        <category>数据结构</category>
+        <category>JAVAWEB开发</category>
       </categories>
       <tags>
-        <tag>字符串</tag>
+        <tag>数据库</tag>
+        <tag>MyBatis</tag>
       </tags>
   </entry>
   <entry>
@@ -240,58 +254,6 @@
       </tags>
   </entry>
   <entry>
-    <title>MyBatis</title>
-    <url>/2022/07/12/MyBatis/</url>
-    <content><![CDATA[<p>对JDBC连接数据库等操作进行一些封装，使用户可以专注在DDL、DQL、DML上，不用处理例如注册驱动、创建connection、创建statement、手动设置参数、结果集检索等</p>
-<p>一、基本使用<br>1.引入依赖，驱动和包<br><a href="https://mvnrepository.com/">可通过该链接查询</a><br>2.开发持久化类，比如Customer类<br>3.配置mybatis-config.xml全局文件（连接信息）<br><a href="https://mybatis.net.cn/getting-started.html">可通过该链接查询</a></p>
-]]></content>
-      <categories>
-        <category>JAVAWEB开发</category>
-      </categories>
-      <tags>
-        <tag>数据库</tag>
-        <tag>MyBatis</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>二叉树的基本概念</title>
-    <url>/2022/04/19/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</url>
-    <content><![CDATA[<h2 id="一、二叉树的定义"><a href="#一、二叉树的定义" class="headerlink" title="一、二叉树的定义"></a>一、二叉树的定义</h2><ol>
-<li>一般二叉树</li>
-<li>完全二叉树</li>
-</ol>
-<hr>
-<h2 id="二、二叉树的性质"><a href="#二、二叉树的性质" class="headerlink" title="二、二叉树的性质"></a>二、二叉树的性质</h2><hr>
-<h2 id="三、二叉树的存储结构"><a href="#三、二叉树的存储结构" class="headerlink" title="三、二叉树的存储结构"></a>三、二叉树的存储结构</h2><hr>
-<h2 id="四、二叉树的遍历"><a href="#四、二叉树的遍历" class="headerlink" title="四、二叉树的遍历"></a>四、二叉树的遍历</h2><ol>
-<li>前序遍历</li>
-<li>中序遍历</li>
-<li>后序遍历</li>
-</ol>
-<hr>
-<h2 id="五、二叉树的建立"><a href="#五、二叉树的建立" class="headerlink" title="五、二叉树的建立"></a>五、二叉树的建立</h2><hr>
-<h2 id="六、线索二叉树"><a href="#六、线索二叉树" class="headerlink" title="六、线索二叉树"></a>六、线索二叉树</h2><hr>
-]]></content>
-      <categories>
-        <category>数据结构</category>
-      </categories>
-      <tags>
-        <tag>二叉树</tag>
-        <tag>概念</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>后缀表示法（逆波兰）</title>
-    <url>/2022/04/19/%E5%90%8E%E7%BC%80%E8%A1%A8%E7%A4%BA%E6%B3%95/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>数据结构</category>
-      </categories>
-      <tags>
-        <tag>栈</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>MySQL知识</title>
     <url>/2022/07/12/MySQL/</url>
     <content><![CDATA[<h3 id="一、基本认识"><a href="#一、基本认识" class="headerlink" title="一、基本认识"></a>一、基本认识</h3><p>1.命令在用；结束<br>2.输入exit退出<br>3.不区分大小写，但最好重要语句大写，表名小写<br>4.事务通常 BEGIN WORK 语句开始，COMMIT或ROLLBACK结束，成功则提交，否则回滚；AUTOCOMMIT控制事务行为，默认是1，自动提交；设置为0，不会自动提交<br>5.登陆数据库 mysql -uxxx -pXXX  (xxx是用户名，XXX是密码)<br>6.选择数据库 use XXX;<br>7.显示可用数据库 show databases; （有s）<br>8.显示可用表 show tables; （有s）<br>9.显示表的列 show columns from XXX (XXX是表名)</p>
@@ -340,6 +302,123 @@
       </categories>
       <tags>
         <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>二叉树的基本概念</title>
+    <url>/2022/04/19/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</url>
+    <content><![CDATA[<h2 id="一、二叉树的定义"><a href="#一、二叉树的定义" class="headerlink" title="一、二叉树的定义"></a>一、二叉树的定义</h2><ol>
+<li>一般二叉树</li>
+<li>完全二叉树</li>
+</ol>
+<hr>
+<h2 id="二、二叉树的性质"><a href="#二、二叉树的性质" class="headerlink" title="二、二叉树的性质"></a>二、二叉树的性质</h2><hr>
+<h2 id="三、二叉树的存储结构"><a href="#三、二叉树的存储结构" class="headerlink" title="三、二叉树的存储结构"></a>三、二叉树的存储结构</h2><hr>
+<h2 id="四、二叉树的遍历"><a href="#四、二叉树的遍历" class="headerlink" title="四、二叉树的遍历"></a>四、二叉树的遍历</h2><ol>
+<li>前序遍历</li>
+<li>中序遍历</li>
+<li>后序遍历</li>
+</ol>
+<hr>
+<h2 id="五、二叉树的建立"><a href="#五、二叉树的建立" class="headerlink" title="五、二叉树的建立"></a>五、二叉树的建立</h2><hr>
+<h2 id="六、线索二叉树"><a href="#六、线索二叉树" class="headerlink" title="六、线索二叉树"></a>六、线索二叉树</h2><hr>
+]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>二叉树</tag>
+        <tag>概念</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>后缀表示法（逆波兰）</title>
+    <url>/2022/04/19/%E5%90%8E%E7%BC%80%E8%A1%A8%E7%A4%BA%E6%B3%95/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>栈</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>cachelab实验</title>
+    <url>/2022/05/08/cachelab/</url>
+    <content><![CDATA[<blockquote>
+<p>本实验将帮助您了解缓存对C程序性能的影响。实验由两部分组成。在第一部分中，您将编写一个模拟高速缓存行为的小型C程序（大约200-300行）。在第二部分中，您将优化一个小的矩阵转置函数，目标是最小化缓存未命中的数量。</p>
+</blockquote>
+<ol>
+<li>使用到的命令<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">./csim-ref [-hv] -s &lt;s&gt; -E &lt;E&gt; -b &lt;b&gt; -t &lt;tracefile&gt;</span><br><span class="line">//例如执行指令“./csim-ref -s 4 -E 1 -b 4 -t traces/yi.trace”将输出“yi.trace”内存引用轨迹文件在标准缓存模拟器（s=4，E=1，b=4）中的缓存使用情况）</span><br></pre></td></tr></table></figure></li>
+<li>参考资料<br><a href="http://www.cs.cmu.edu/afs/cs/academic/class/15213-f15/www/recitations/rec07.pdf">CMU官方文档</a></li>
+</ol>
+<h2 id="（一）PART-A"><a href="#（一）PART-A" class="headerlink" title="（一）PART A"></a><strong>（一）PART A</strong></h2><hr>
+<h3 id="1-cache的设计与实现"><a href="#1-cache的设计与实现" class="headerlink" title="1.cache的设计与实现"></a><strong>1.cache的设计与实现</strong></h3><p><img src="/images/2022-05-08-02-13-07.png"></p>
+<p>分析：根据实验要求，这个模拟缓存并不真的需要存储数据，所以<strong>不需要使用块偏移，既B不重要</strong>；高速缓存行除了需要v,tag之外，还需要使用LRU（Least Recently Used 最近最少使用策略），具体就是当cache满的时候，选择最后访问时间距离现在最远的块进行驱逐&#x2F;替换，这里我的代码实现就是给每一行绑一个Lrunumber，<strong>这个值越大，代表这行最后访问时间距离现在越远，可以进行驱逐&#x2F;替换。</strong></p>
+<p>根据该结构可以定义下面的结构体</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//定义行的属性</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">int</span> valid;</span><br><span class="line">    <span class="type">int</span> tag;</span><br><span class="line">    <span class="type">int</span> Lrunumber;</span><br><span class="line">&#125;cache_line;</span><br></pre></td></tr></table></figure>
+<p><strong>根据图1</strong>，Cache可以设计成一个二维的结构体数组cache[S][E]，首先需要动态为其分配内存及初始化，然后释放，这里写两个函数，一个是分配内存的函数，一个是释放内存的函数</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//内存分配及初始化</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">initcache</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//整个cache的，开辟每一组的空间</span></span><br><span class="line">    cache = (cache_line**)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(cache_line*)*S);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;S; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//每一组的，开辟每一行的空间</span></span><br><span class="line">        cache[i] = (cache_line*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(cache_line)*E);</span><br><span class="line">        <span class="comment">//初始化每一行的属性</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>; j&lt;E; ++j)</span><br><span class="line">        &#123;</span><br><span class="line">            cache[i][j].valid = <span class="number">0</span>;</span><br><span class="line">            cache[i][j].tag = <span class="number">-1</span>;</span><br><span class="line">            cache[i][j].Lrunumber = <span class="number">-1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//释放内存</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">freecache</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//释放每一组</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;S; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">free</span>(cache[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//释放整个cache</span></span><br><span class="line">    <span class="built_in">free</span>(cache);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>第一部分ok, cache的结构，以及分配&#x2F;释放内存函数都写好了，在主函数main中，我们就可以为缓存cache分配内存，使用完后进行释放</p>
+<hr>
+<h3 id="2-参数的处理"><a href="#2-参数的处理" class="headerlink" title="2.参数的处理"></a><strong>2.参数的处理</strong></h3><p><img src="/images/2022-05-09-16-51-57.png"><br>分析：命令行的参数如何处理是个问题，因为命令行里的字符都是字符串，需要解析出s,E,b,t这些必要的参数是多少（h和v是可选参数，这里不做讨论），才能确定分配多少内存空间给缓存，才能确定去读哪个内存引用轨迹文件</p>
+<p>这里官方文档中推荐了两个函数并给出了用法，我们可以直接使用<br><img src="/images/2022-05-09-16-59-55.png"><br><img src="/images/2022-05-09-17-01-06.png"></p>
+<blockquote>
+<p>getopt函数可以自动读取解析命令行的每个参数，不必太深究是如何实现，大概是每个参数都会给到optarg，因为命令行都是字符串，所以一些整型参数需要用函数atoi()进行转换，字符串t需要用strcpy()函数进行复制操作</p>
+</blockquote>
+<p>根据getopt函数，在主函数中写出如下代码</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//主函数，处理参数，进行各类函数调用</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">int</span> argc, <span class="type">char</span>* argv[])</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//hit, miss, eviction初始化为0</span></span><br><span class="line">    hit = miss = eviction = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//getopt函数，具体请看用法</span></span><br><span class="line">    <span class="type">int</span> opt;</span><br><span class="line">    <span class="keyword">while</span>(<span class="number">-1</span>!=(opt = (getopt(argc,argv,<span class="string">&quot;hvs:E:b:t:&quot;</span>))))</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">switch</span>(opt)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;E&#x27;</span>:</span><br><span class="line">                E = atoi(optarg);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;s&#x27;</span>:</span><br><span class="line">                s = atoi(optarg);</span><br><span class="line">                S = <span class="number">1</span> &lt;&lt; s;                <span class="comment">// S=2^s</span></span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;b&#x27;</span>:</span><br><span class="line">                b = atoi(optarg);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;t&#x27;</span>:</span><br><span class="line">                <span class="built_in">strcpy</span>(t,optarg);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">default</span> :</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//如果参数不合法，直接退出</span></span><br><span class="line">    <span class="keyword">if</span>(s&lt;=<span class="number">0</span> || E&lt;=<span class="number">0</span> || b&lt;=<span class="number">0</span> || t==<span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    initcache();</span><br><span class="line"></span><br><span class="line">    parse_trace();</span><br><span class="line"></span><br><span class="line">    printSummary(hit, miss, eviction);</span><br><span class="line"></span><br><span class="line">    freecache();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果成功解析出s,E,b,t的参数，就进行内存的分配，cache的内存分配了，也知道去读哪个内存引用轨迹文件了，那怎么读呢？接下来就要写parse_trace()了</p>
+<p><img src="/images/2022-05-09-17-13-24.png"><br><img src="/images/2022-05-09-17-13-41.png"></p>
+<blockquote>
+<p>每个数据加载（L）或存储（S）操作最多可导致一次缓存未命中。数据修改操作（M）被视为加载然后存储到同一地址（既一次加载和一次存储），所以M操作后不接break,因为还要进行一次S</p>
+</blockquote>
+<p>根据fscanf函数用法，写出如下代码</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//文本处理函数，解析操作，地址，大小</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">parse_trace</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    FILE* pFile;</span><br><span class="line">    pFile = fopen(t, <span class="string">&quot;r&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="type">char</span> identifier;        <span class="comment">//操作</span></span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> address;   <span class="comment">//地址</span></span><br><span class="line">    <span class="type">int</span> size;               <span class="comment">//大小</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//当文件内文本有效时，while循环不停地读，并把地址传入update进行解析判断是否命中进行更新，还需要判断更新Lrunumber</span></span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">fscanf</span>(pFile, <span class="string">&quot; %c %xu,%d\n&quot;</span>, &amp;identifier, &amp;address, &amp;size) &gt; <span class="number">0</span>)   </span><br><span class="line">    &#123;  </span><br><span class="line">        <span class="keyword">switch</span>(identifier)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;I&#x27;</span> :</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;L&#x27;</span> :</span><br><span class="line">                update(address);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;M&#x27;</span> :</span><br><span class="line">                update(address);</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;S&#x27;</span> :</span><br><span class="line">                update(address);</span><br><span class="line">        &#125;</span><br><span class="line">        update_Lrunumber(); </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//读完后关闭文件</span></span><br><span class="line">    fclose(pFile);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>循环中<strong>每次</strong>把除了I操作的其他操作的地址传入地址处理函数update（下面会说明），同时使用update_Lrunumber()函数将每组每行的有效位为1的缓存行的Lrunumber自增1（<strong>表示每次内存引用的时候，该缓存行都没有被用到，既没有命中，也没有进行替换或放置策略，所以自增1，当这个数越大，表示越久没有被使用过，后面进行替换策略时就可以用这个缓存行来替换</strong>）</p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//更新Lrunumber,每一组每一行如果有效位为1，说明该行有数据，未被替换或放置，Lrunumber自增1</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">update_Lrunumber</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;S; ++i)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>; j&lt;E; ++j)&#123;</span><br><span class="line">            <span class="keyword">if</span>(cache[i][j].valid == <span class="number">1</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                cache[i][j].Lrunumber++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="3-判断是否命中"><a href="#3-判断是否命中" class="headerlink" title="3.判断是否命中"></a><strong>3.判断是否命中</strong></h3><p><img src="/images/2022-05-12-00-47-29.png"></p>
+<blockquote>
+<p>分析：CPU想要读取字w时，会通过地址去寻找看它是否在缓存中，地址被分为t标记位和s组索引位和b块偏移位，<strong>第一步通过组索引找到缓存相应的组，第二步通过标记位找到相应的缓存行，当地址的tag和缓存行的tag匹配且有效位为1时，说明该块中有我们需要的数据</strong>，第三步就是通过块偏移取出数据，显然实验并不需要我们真的进行数据的读取&#x2F;存入。</p>
+</blockquote>
+<p>根据该原理写出如下代码</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//解析地址，去判断缓存是否命中，记录hit,miss,eviction的值，当高速缓存行被使用后，Lrunumber置为0，执行LRU策略时，选择Lrunumber最大的进行替换</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">update</span><span class="params">(<span class="type">unsigned</span> <span class="type">int</span> address)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//解析出组索引</span></span><br><span class="line">    <span class="type">int</span> setindex_add = (address &gt;&gt; b) &amp; ((<span class="number">-1U</span>) &gt;&gt; (<span class="number">64</span> - s));</span><br><span class="line">    <span class="comment">//解析出tag</span></span><br><span class="line">    <span class="type">int</span> tag_add = address &gt;&gt; (b + s);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//设置最大的一个Lrunumber,初始化为最小</span></span><br><span class="line">    <span class="type">int</span> max_Lrunumber = INT_MIN;</span><br><span class="line">    <span class="type">int</span> max_Lrunumber_index = <span class="number">-1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//缓存命中，当地址的tag等于缓存行的tag</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;E; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//当这个组的某一缓存行的tag等于地址的tag，命中</span></span><br><span class="line">        <span class="keyword">if</span>(cache[setindex_add][i].tag == tag_add)</span><br><span class="line">        &#123;</span><br><span class="line">            hit++;</span><br><span class="line">            cache[setindex_add][i].Lrunumber = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//高速缓存行为空，说明未被使用，既高速缓存行的有效位为0时，执行放置策略</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;E; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//当这个组的某一缓存行的有效位为0，说明未被使用</span></span><br><span class="line">        <span class="keyword">if</span>(cache[setindex_add][i].valid == <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            miss++;</span><br><span class="line">            cache[setindex_add][i].valid = <span class="number">1</span>;</span><br><span class="line">            cache[setindex_add][i].tag = tag_add;</span><br><span class="line">            cache[setindex_add][i].Lrunumber = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//高速缓存行满了且不命中，进行驱逐替换，执行LRU策略</span></span><br><span class="line">    miss++;</span><br><span class="line">    eviction++;</span><br><span class="line">    <span class="comment">//循环找出有最大的Lrunumber的那一行，记录下是哪一行（i）</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;E; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(cache[setindex_add][i].Lrunumber &gt; max_Lrunumber)</span><br><span class="line">        &#123;</span><br><span class="line">            max_Lrunumber = cache[setindex_add][i].Lrunumber;</span><br><span class="line">            max_Lrunumber_index = i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//上面已经找到是哪一行可以替换，然后进行替换</span></span><br><span class="line">    cache[setindex_add][max_Lrunumber_index].tag = tag_add;</span><br><span class="line">    cache[setindex_add][max_Lrunumber_index].Lrunumber = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>判断缓存命中有3种情况，第一种是直接命中；第二种是不命中，缓存行为空，进行放置策略；第三种是不命中，缓存行满，需要进行驱逐&#x2F;替换。每次执行完这些操作后说明这些行最近都被用过，需要将Lrunumber置0，执行替换时，选择Lrunumber最大的进行替换（说明最久未被使用）</p>
+</blockquote>
+<blockquote>
+<p>怎么解析出组索引和tag呢，利用位运算，<strong>任何数跟0相与都等于0，任何数跟1相与等于它本身</strong>，由于<strong>m &#x3D; t + s + b</strong>，所以地址直接右移s+b位得到t标记位。</p>
+</blockquote>
+<p><img src="/images/2022-05-12-01-29-40.png"><br><img src="/images/2022-05-12-01-30-45.png"></p>
+<hr>
+<h3 id="4-整体的代码"><a href="#4-整体的代码" class="headerlink" title="4.整体的代码"></a><strong>4.整体的代码</strong></h3><blockquote>
+<p>整体代码添加了需要的头文件，以及为了方便操作函数，一些主要参数都设置成了全局变量，以便全部函数都能使用。</p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;cachelab.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;getopt.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;limits.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//定义全局变量，以便所有函数都能使用</span></span><br><span class="line"><span class="type">int</span> s,E,b,S; </span><br><span class="line"><span class="type">int</span> hit,miss,eviction;</span><br><span class="line"></span><br><span class="line"><span class="type">char</span> t[<span class="number">1000</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">//定义行的属性</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">int</span> valid;</span><br><span class="line">    <span class="type">int</span> tag;</span><br><span class="line">    <span class="type">int</span> Lrunumber;</span><br><span class="line">&#125;cache_line;</span><br><span class="line"></span><br><span class="line"><span class="comment">//定义二维结构体数组</span></span><br><span class="line">cache_line** cache = <span class="literal">NULL</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//内存分配及初始化</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">initcache</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//整个cache的，开辟每一组的空间</span></span><br><span class="line">    cache = (cache_line**)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(cache_line*)*S);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;S; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//每一组的，开辟每一行的空间</span></span><br><span class="line">        cache[i] = (cache_line*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(cache_line)*E);</span><br><span class="line">        <span class="comment">//初始化每一行的属性</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>; j&lt;E; ++j)</span><br><span class="line">        &#123;</span><br><span class="line">            cache[i][j].valid = <span class="number">0</span>;</span><br><span class="line">            cache[i][j].tag = <span class="number">-1</span>;</span><br><span class="line">            cache[i][j].Lrunumber = <span class="number">-1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//释放内存</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">freecache</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//释放每一组</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;S; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">free</span>(cache[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//释放整个cache</span></span><br><span class="line">    <span class="built_in">free</span>(cache);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//解析地址，去判断缓存是否命中，记录hit,miss,eviction的值，当高速缓存行被使用后，Lrunumber置为0，执行LRU策略时，选择Lrunumber最大的进行替换</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">update</span><span class="params">(<span class="type">unsigned</span> <span class="type">int</span> address)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//解析出组索引</span></span><br><span class="line">    <span class="type">int</span> setindex_add = (address &gt;&gt; b) &amp; ((<span class="number">-1U</span>) &gt;&gt; (<span class="number">64</span> - s));</span><br><span class="line">    <span class="comment">//解析出tag</span></span><br><span class="line">    <span class="type">int</span> tag_add = address &gt;&gt; (b + s);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//设置最大的一个Lrunumber,初始化为最小</span></span><br><span class="line">    <span class="type">int</span> max_Lrunumber = INT_MIN;</span><br><span class="line">    <span class="type">int</span> max_Lrunumber_index = <span class="number">-1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//缓存命中，当地址的tag等于缓存行的tag</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;E; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//当这个组的某一缓存行的tag等于地址的tag，命中</span></span><br><span class="line">        <span class="keyword">if</span>(cache[setindex_add][i].tag == tag_add)</span><br><span class="line">        &#123;</span><br><span class="line">            hit++;</span><br><span class="line">            cache[setindex_add][i].Lrunumber = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//高速缓存行为空，说明未被使用，既高速缓存行的有效位为0时，执行放置策略</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;E; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//当这个组的某一缓存行的有效位为0，说明未被使用</span></span><br><span class="line">        <span class="keyword">if</span>(cache[setindex_add][i].valid == <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            miss++;</span><br><span class="line">            cache[setindex_add][i].valid = <span class="number">1</span>;</span><br><span class="line">            cache[setindex_add][i].tag = tag_add;</span><br><span class="line">            cache[setindex_add][i].Lrunumber = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//高速缓存行满了且不命中，进行驱逐替换，执行LRU策略</span></span><br><span class="line">    miss++;</span><br><span class="line">    eviction++;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;E; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(cache[setindex_add][i].Lrunumber &gt; max_Lrunumber)</span><br><span class="line">        &#123;</span><br><span class="line">            max_Lrunumber = cache[setindex_add][i].Lrunumber;</span><br><span class="line">            max_Lrunumber_index = i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cache[setindex_add][max_Lrunumber_index].tag = tag_add;</span><br><span class="line">    cache[setindex_add][max_Lrunumber_index].Lrunumber = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//更新Lrunumber,每一组每一行如果有效位为1，说明该行有数据，未被替换或放置，Lrunumber自增1</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">update_Lrunumber</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;S; ++i)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>; j&lt;E; ++j)&#123;</span><br><span class="line">            <span class="keyword">if</span>(cache[i][j].valid == <span class="number">1</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                cache[i][j].Lrunumber++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//文本处理函数，解析操作，地址，大小</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">parse_trace</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    FILE* pFile;</span><br><span class="line">    pFile = fopen(t, <span class="string">&quot;r&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="type">char</span> identifier;        <span class="comment">//操作</span></span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> address;   <span class="comment">//地址</span></span><br><span class="line">    <span class="type">int</span> size;               <span class="comment">//大小</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//当文件内文本有效时，不停地读，并把地址传入update进行解析判断是否命中进行更新，还需要判断更新Lrunumber</span></span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">fscanf</span>(pFile, <span class="string">&quot; %c %xu,%d\n&quot;</span>, &amp;identifier, &amp;address, &amp;size) &gt; <span class="number">0</span>)   </span><br><span class="line">    &#123;  </span><br><span class="line">        <span class="keyword">switch</span>(identifier)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;I&#x27;</span> :</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;L&#x27;</span> :</span><br><span class="line">                update(address);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;M&#x27;</span> :</span><br><span class="line">                update(address);</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;S&#x27;</span> :</span><br><span class="line">                update(address);</span><br><span class="line">        &#125;</span><br><span class="line">        update_Lrunumber(); </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//读完后关闭文件</span></span><br><span class="line">    fclose(pFile);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//主函数，处理参数，进行各类函数调用</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">int</span> argc, <span class="type">char</span>* argv[])</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//hit, miss, eviction初始化为0</span></span><br><span class="line">    hit = miss = eviction = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//getopt函数，具体请看用法</span></span><br><span class="line">    <span class="type">int</span> opt;</span><br><span class="line">    <span class="keyword">while</span>(<span class="number">-1</span>!=(opt = (getopt(argc,argv,<span class="string">&quot;hvs:E:b:t:&quot;</span>))))</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">switch</span>(opt)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;E&#x27;</span>:</span><br><span class="line">                E = atoi(optarg);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;s&#x27;</span>:</span><br><span class="line">                s = atoi(optarg);</span><br><span class="line">                S = <span class="number">1</span> &lt;&lt; s;                <span class="comment">// S=2^s</span></span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;b&#x27;</span>:</span><br><span class="line">                b = atoi(optarg);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;t&#x27;</span>:</span><br><span class="line">                <span class="built_in">strcpy</span>(t,optarg);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">default</span> :</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//如果参数不合法，直接退出</span></span><br><span class="line">    <span class="keyword">if</span>(s&lt;=<span class="number">0</span> || E&lt;=<span class="number">0</span> || b&lt;=<span class="number">0</span> || t==<span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    initcache();</span><br><span class="line"></span><br><span class="line">    parse_trace();</span><br><span class="line"></span><br><span class="line">    printSummary(hit, miss, eviction);</span><br><span class="line"></span><br><span class="line">    freecache();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="5-结果展示"><a href="#5-结果展示" class="headerlink" title="5.结果展示"></a><strong>5.结果展示</strong></h3><p><img src="/images/2022-05-12-01-34-59.png"></p>
+]]></content>
+      <categories>
+        <category>csapp</category>
+      </categories>
+      <tags>
+        <tag>csapp实验</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>异常的捕获和处理</title>
+    <url>/2022/07/12/%E5%BC%82%E5%B8%B8%E7%9A%84%E6%8D%95%E8%8E%B7%E5%92%8C%E5%A4%84%E7%90%86/</url>
+    <content><![CDATA[<h3 id="一、"><a href="#一、" class="headerlink" title="一、"></a>一、</h3>]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
       </tags>
   </entry>
   <entry>
@@ -456,71 +535,14 @@
       </tags>
   </entry>
   <entry>
-    <title>cachelab实验</title>
-    <url>/2022/05/08/cachelab/</url>
-    <content><![CDATA[<blockquote>
-<p>本实验将帮助您了解缓存对C程序性能的影响。实验由两部分组成。在第一部分中，您将编写一个模拟高速缓存行为的小型C程序（大约200-300行）。在第二部分中，您将优化一个小的矩阵转置函数，目标是最小化缓存未命中的数量。</p>
-</blockquote>
-<ol>
-<li>使用到的命令<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">./csim-ref [-hv] -s &lt;s&gt; -E &lt;E&gt; -b &lt;b&gt; -t &lt;tracefile&gt;</span><br><span class="line">//例如执行指令“./csim-ref -s 4 -E 1 -b 4 -t traces/yi.trace”将输出“yi.trace”内存引用轨迹文件在标准缓存模拟器（s=4，E=1，b=4）中的缓存使用情况）</span><br></pre></td></tr></table></figure></li>
-<li>参考资料<br><a href="http://www.cs.cmu.edu/afs/cs/academic/class/15213-f15/www/recitations/rec07.pdf">CMU官方文档</a></li>
-</ol>
-<h2 id="（一）PART-A"><a href="#（一）PART-A" class="headerlink" title="（一）PART A"></a><strong>（一）PART A</strong></h2><hr>
-<h3 id="1-cache的设计与实现"><a href="#1-cache的设计与实现" class="headerlink" title="1.cache的设计与实现"></a><strong>1.cache的设计与实现</strong></h3><p><img src="/images/2022-05-08-02-13-07.png"></p>
-<p>分析：根据实验要求，这个模拟缓存并不真的需要存储数据，所以<strong>不需要使用块偏移，既B不重要</strong>；高速缓存行除了需要v,tag之外，还需要使用LRU（Least Recently Used 最近最少使用策略），具体就是当cache满的时候，选择最后访问时间距离现在最远的块进行驱逐&#x2F;替换，这里我的代码实现就是给每一行绑一个Lrunumber，<strong>这个值越大，代表这行最后访问时间距离现在越远，可以进行驱逐&#x2F;替换。</strong></p>
-<p>根据该结构可以定义下面的结构体</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//定义行的属性</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">int</span> valid;</span><br><span class="line">    <span class="type">int</span> tag;</span><br><span class="line">    <span class="type">int</span> Lrunumber;</span><br><span class="line">&#125;cache_line;</span><br></pre></td></tr></table></figure>
-<p><strong>根据图1</strong>，Cache可以设计成一个二维的结构体数组cache[S][E]，首先需要动态为其分配内存及初始化，然后释放，这里写两个函数，一个是分配内存的函数，一个是释放内存的函数</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//内存分配及初始化</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">initcache</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//整个cache的，开辟每一组的空间</span></span><br><span class="line">    cache = (cache_line**)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(cache_line*)*S);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;S; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//每一组的，开辟每一行的空间</span></span><br><span class="line">        cache[i] = (cache_line*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(cache_line)*E);</span><br><span class="line">        <span class="comment">//初始化每一行的属性</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>; j&lt;E; ++j)</span><br><span class="line">        &#123;</span><br><span class="line">            cache[i][j].valid = <span class="number">0</span>;</span><br><span class="line">            cache[i][j].tag = <span class="number">-1</span>;</span><br><span class="line">            cache[i][j].Lrunumber = <span class="number">-1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//释放内存</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">freecache</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//释放每一组</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;S; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">free</span>(cache[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//释放整个cache</span></span><br><span class="line">    <span class="built_in">free</span>(cache);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>第一部分ok, cache的结构，以及分配&#x2F;释放内存函数都写好了，在主函数main中，我们就可以为缓存cache分配内存，使用完后进行释放</p>
-<hr>
-<h3 id="2-参数的处理"><a href="#2-参数的处理" class="headerlink" title="2.参数的处理"></a><strong>2.参数的处理</strong></h3><p><img src="/images/2022-05-09-16-51-57.png"><br>分析：命令行的参数如何处理是个问题，因为命令行里的字符都是字符串，需要解析出s,E,b,t这些必要的参数是多少（h和v是可选参数，这里不做讨论），才能确定分配多少内存空间给缓存，才能确定去读哪个内存引用轨迹文件</p>
-<p>这里官方文档中推荐了两个函数并给出了用法，我们可以直接使用<br><img src="/images/2022-05-09-16-59-55.png"><br><img src="/images/2022-05-09-17-01-06.png"></p>
-<blockquote>
-<p>getopt函数可以自动读取解析命令行的每个参数，不必太深究是如何实现，大概是每个参数都会给到optarg，因为命令行都是字符串，所以一些整型参数需要用函数atoi()进行转换，字符串t需要用strcpy()函数进行复制操作</p>
-</blockquote>
-<p>根据getopt函数，在主函数中写出如下代码</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//主函数，处理参数，进行各类函数调用</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">int</span> argc, <span class="type">char</span>* argv[])</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//hit, miss, eviction初始化为0</span></span><br><span class="line">    hit = miss = eviction = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//getopt函数，具体请看用法</span></span><br><span class="line">    <span class="type">int</span> opt;</span><br><span class="line">    <span class="keyword">while</span>(<span class="number">-1</span>!=(opt = (getopt(argc,argv,<span class="string">&quot;hvs:E:b:t:&quot;</span>))))</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">switch</span>(opt)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;E&#x27;</span>:</span><br><span class="line">                E = atoi(optarg);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;s&#x27;</span>:</span><br><span class="line">                s = atoi(optarg);</span><br><span class="line">                S = <span class="number">1</span> &lt;&lt; s;                <span class="comment">// S=2^s</span></span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;b&#x27;</span>:</span><br><span class="line">                b = atoi(optarg);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;t&#x27;</span>:</span><br><span class="line">                <span class="built_in">strcpy</span>(t,optarg);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">default</span> :</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//如果参数不合法，直接退出</span></span><br><span class="line">    <span class="keyword">if</span>(s&lt;=<span class="number">0</span> || E&lt;=<span class="number">0</span> || b&lt;=<span class="number">0</span> || t==<span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    initcache();</span><br><span class="line"></span><br><span class="line">    parse_trace();</span><br><span class="line"></span><br><span class="line">    printSummary(hit, miss, eviction);</span><br><span class="line"></span><br><span class="line">    freecache();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>如果成功解析出s,E,b,t的参数，就进行内存的分配，cache的内存分配了，也知道去读哪个内存引用轨迹文件了，那怎么读呢？接下来就要写parse_trace()了</p>
-<p><img src="/images/2022-05-09-17-13-24.png"><br><img src="/images/2022-05-09-17-13-41.png"></p>
-<blockquote>
-<p>每个数据加载（L）或存储（S）操作最多可导致一次缓存未命中。数据修改操作（M）被视为加载然后存储到同一地址（既一次加载和一次存储），所以M操作后不接break,因为还要进行一次S</p>
-</blockquote>
-<p>根据fscanf函数用法，写出如下代码</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//文本处理函数，解析操作，地址，大小</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">parse_trace</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    FILE* pFile;</span><br><span class="line">    pFile = fopen(t, <span class="string">&quot;r&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="type">char</span> identifier;        <span class="comment">//操作</span></span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> address;   <span class="comment">//地址</span></span><br><span class="line">    <span class="type">int</span> size;               <span class="comment">//大小</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//当文件内文本有效时，while循环不停地读，并把地址传入update进行解析判断是否命中进行更新，还需要判断更新Lrunumber</span></span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">fscanf</span>(pFile, <span class="string">&quot; %c %xu,%d\n&quot;</span>, &amp;identifier, &amp;address, &amp;size) &gt; <span class="number">0</span>)   </span><br><span class="line">    &#123;  </span><br><span class="line">        <span class="keyword">switch</span>(identifier)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;I&#x27;</span> :</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;L&#x27;</span> :</span><br><span class="line">                update(address);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;M&#x27;</span> :</span><br><span class="line">                update(address);</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;S&#x27;</span> :</span><br><span class="line">                update(address);</span><br><span class="line">        &#125;</span><br><span class="line">        update_Lrunumber(); </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//读完后关闭文件</span></span><br><span class="line">    fclose(pFile);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>循环中<strong>每次</strong>把除了I操作的其他操作的地址传入地址处理函数update（下面会说明），同时使用update_Lrunumber()函数将每组每行的有效位为1的缓存行的Lrunumber自增1（<strong>表示每次内存引用的时候，该缓存行都没有被用到，既没有命中，也没有进行替换或放置策略，所以自增1，当这个数越大，表示越久没有被使用过，后面进行替换策略时就可以用这个缓存行来替换</strong>）</p>
-</blockquote>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//更新Lrunumber,每一组每一行如果有效位为1，说明该行有数据，未被替换或放置，Lrunumber自增1</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">update_Lrunumber</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;S; ++i)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>; j&lt;E; ++j)&#123;</span><br><span class="line">            <span class="keyword">if</span>(cache[i][j].valid == <span class="number">1</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                cache[i][j].Lrunumber++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h3 id="3-判断是否命中"><a href="#3-判断是否命中" class="headerlink" title="3.判断是否命中"></a><strong>3.判断是否命中</strong></h3><p><img src="/images/2022-05-12-00-47-29.png"></p>
-<blockquote>
-<p>分析：CPU想要读取字w时，会通过地址去寻找看它是否在缓存中，地址被分为t标记位和s组索引位和b块偏移位，<strong>第一步通过组索引找到缓存相应的组，第二步通过标记位找到相应的缓存行，当地址的tag和缓存行的tag匹配且有效位为1时，说明该块中有我们需要的数据</strong>，第三步就是通过块偏移取出数据，显然实验并不需要我们真的进行数据的读取&#x2F;存入。</p>
-</blockquote>
-<p>根据该原理写出如下代码</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//解析地址，去判断缓存是否命中，记录hit,miss,eviction的值，当高速缓存行被使用后，Lrunumber置为0，执行LRU策略时，选择Lrunumber最大的进行替换</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">update</span><span class="params">(<span class="type">unsigned</span> <span class="type">int</span> address)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//解析出组索引</span></span><br><span class="line">    <span class="type">int</span> setindex_add = (address &gt;&gt; b) &amp; ((<span class="number">-1U</span>) &gt;&gt; (<span class="number">64</span> - s));</span><br><span class="line">    <span class="comment">//解析出tag</span></span><br><span class="line">    <span class="type">int</span> tag_add = address &gt;&gt; (b + s);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//设置最大的一个Lrunumber,初始化为最小</span></span><br><span class="line">    <span class="type">int</span> max_Lrunumber = INT_MIN;</span><br><span class="line">    <span class="type">int</span> max_Lrunumber_index = <span class="number">-1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//缓存命中，当地址的tag等于缓存行的tag</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;E; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//当这个组的某一缓存行的tag等于地址的tag，命中</span></span><br><span class="line">        <span class="keyword">if</span>(cache[setindex_add][i].tag == tag_add)</span><br><span class="line">        &#123;</span><br><span class="line">            hit++;</span><br><span class="line">            cache[setindex_add][i].Lrunumber = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//高速缓存行为空，说明未被使用，既高速缓存行的有效位为0时，执行放置策略</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;E; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//当这个组的某一缓存行的有效位为0，说明未被使用</span></span><br><span class="line">        <span class="keyword">if</span>(cache[setindex_add][i].valid == <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            miss++;</span><br><span class="line">            cache[setindex_add][i].valid = <span class="number">1</span>;</span><br><span class="line">            cache[setindex_add][i].tag = tag_add;</span><br><span class="line">            cache[setindex_add][i].Lrunumber = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//高速缓存行满了且不命中，进行驱逐替换，执行LRU策略</span></span><br><span class="line">    miss++;</span><br><span class="line">    eviction++;</span><br><span class="line">    <span class="comment">//循环找出有最大的Lrunumber的那一行，记录下是哪一行（i）</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;E; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(cache[setindex_add][i].Lrunumber &gt; max_Lrunumber)</span><br><span class="line">        &#123;</span><br><span class="line">            max_Lrunumber = cache[setindex_add][i].Lrunumber;</span><br><span class="line">            max_Lrunumber_index = i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//上面已经找到是哪一行可以替换，然后进行替换</span></span><br><span class="line">    cache[setindex_add][max_Lrunumber_index].tag = tag_add;</span><br><span class="line">    cache[setindex_add][max_Lrunumber_index].Lrunumber = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>判断缓存命中有3种情况，第一种是直接命中；第二种是不命中，缓存行为空，进行放置策略；第三种是不命中，缓存行满，需要进行驱逐&#x2F;替换。每次执行完这些操作后说明这些行最近都被用过，需要将Lrunumber置0，执行替换时，选择Lrunumber最大的进行替换（说明最久未被使用）</p>
-</blockquote>
-<blockquote>
-<p>怎么解析出组索引和tag呢，利用位运算，<strong>任何数跟0相与都等于0，任何数跟1相与等于它本身</strong>，由于<strong>m &#x3D; t + s + b</strong>，所以地址直接右移s+b位得到t标记位。</p>
-</blockquote>
-<p><img src="/images/2022-05-12-01-29-40.png"><br><img src="/images/2022-05-12-01-30-45.png"></p>
-<hr>
-<h3 id="4-整体的代码"><a href="#4-整体的代码" class="headerlink" title="4.整体的代码"></a><strong>4.整体的代码</strong></h3><blockquote>
-<p>整体代码添加了需要的头文件，以及为了方便操作函数，一些主要参数都设置成了全局变量，以便全部函数都能使用。</p>
-</blockquote>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;cachelab.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;getopt.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;limits.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//定义全局变量，以便所有函数都能使用</span></span><br><span class="line"><span class="type">int</span> s,E,b,S; </span><br><span class="line"><span class="type">int</span> hit,miss,eviction;</span><br><span class="line"></span><br><span class="line"><span class="type">char</span> t[<span class="number">1000</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">//定义行的属性</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">int</span> valid;</span><br><span class="line">    <span class="type">int</span> tag;</span><br><span class="line">    <span class="type">int</span> Lrunumber;</span><br><span class="line">&#125;cache_line;</span><br><span class="line"></span><br><span class="line"><span class="comment">//定义二维结构体数组</span></span><br><span class="line">cache_line** cache = <span class="literal">NULL</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//内存分配及初始化</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">initcache</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//整个cache的，开辟每一组的空间</span></span><br><span class="line">    cache = (cache_line**)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(cache_line*)*S);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;S; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//每一组的，开辟每一行的空间</span></span><br><span class="line">        cache[i] = (cache_line*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(cache_line)*E);</span><br><span class="line">        <span class="comment">//初始化每一行的属性</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>; j&lt;E; ++j)</span><br><span class="line">        &#123;</span><br><span class="line">            cache[i][j].valid = <span class="number">0</span>;</span><br><span class="line">            cache[i][j].tag = <span class="number">-1</span>;</span><br><span class="line">            cache[i][j].Lrunumber = <span class="number">-1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//释放内存</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">freecache</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//释放每一组</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;S; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">free</span>(cache[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//释放整个cache</span></span><br><span class="line">    <span class="built_in">free</span>(cache);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//解析地址，去判断缓存是否命中，记录hit,miss,eviction的值，当高速缓存行被使用后，Lrunumber置为0，执行LRU策略时，选择Lrunumber最大的进行替换</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">update</span><span class="params">(<span class="type">unsigned</span> <span class="type">int</span> address)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//解析出组索引</span></span><br><span class="line">    <span class="type">int</span> setindex_add = (address &gt;&gt; b) &amp; ((<span class="number">-1U</span>) &gt;&gt; (<span class="number">64</span> - s));</span><br><span class="line">    <span class="comment">//解析出tag</span></span><br><span class="line">    <span class="type">int</span> tag_add = address &gt;&gt; (b + s);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//设置最大的一个Lrunumber,初始化为最小</span></span><br><span class="line">    <span class="type">int</span> max_Lrunumber = INT_MIN;</span><br><span class="line">    <span class="type">int</span> max_Lrunumber_index = <span class="number">-1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//缓存命中，当地址的tag等于缓存行的tag</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;E; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//当这个组的某一缓存行的tag等于地址的tag，命中</span></span><br><span class="line">        <span class="keyword">if</span>(cache[setindex_add][i].tag == tag_add)</span><br><span class="line">        &#123;</span><br><span class="line">            hit++;</span><br><span class="line">            cache[setindex_add][i].Lrunumber = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//高速缓存行为空，说明未被使用，既高速缓存行的有效位为0时，执行放置策略</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;E; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//当这个组的某一缓存行的有效位为0，说明未被使用</span></span><br><span class="line">        <span class="keyword">if</span>(cache[setindex_add][i].valid == <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            miss++;</span><br><span class="line">            cache[setindex_add][i].valid = <span class="number">1</span>;</span><br><span class="line">            cache[setindex_add][i].tag = tag_add;</span><br><span class="line">            cache[setindex_add][i].Lrunumber = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//高速缓存行满了且不命中，进行驱逐替换，执行LRU策略</span></span><br><span class="line">    miss++;</span><br><span class="line">    eviction++;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;E; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(cache[setindex_add][i].Lrunumber &gt; max_Lrunumber)</span><br><span class="line">        &#123;</span><br><span class="line">            max_Lrunumber = cache[setindex_add][i].Lrunumber;</span><br><span class="line">            max_Lrunumber_index = i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cache[setindex_add][max_Lrunumber_index].tag = tag_add;</span><br><span class="line">    cache[setindex_add][max_Lrunumber_index].Lrunumber = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//更新Lrunumber,每一组每一行如果有效位为1，说明该行有数据，未被替换或放置，Lrunumber自增1</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">update_Lrunumber</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;S; ++i)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>; j&lt;E; ++j)&#123;</span><br><span class="line">            <span class="keyword">if</span>(cache[i][j].valid == <span class="number">1</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                cache[i][j].Lrunumber++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//文本处理函数，解析操作，地址，大小</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">parse_trace</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    FILE* pFile;</span><br><span class="line">    pFile = fopen(t, <span class="string">&quot;r&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="type">char</span> identifier;        <span class="comment">//操作</span></span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> address;   <span class="comment">//地址</span></span><br><span class="line">    <span class="type">int</span> size;               <span class="comment">//大小</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//当文件内文本有效时，不停地读，并把地址传入update进行解析判断是否命中进行更新，还需要判断更新Lrunumber</span></span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">fscanf</span>(pFile, <span class="string">&quot; %c %xu,%d\n&quot;</span>, &amp;identifier, &amp;address, &amp;size) &gt; <span class="number">0</span>)   </span><br><span class="line">    &#123;  </span><br><span class="line">        <span class="keyword">switch</span>(identifier)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;I&#x27;</span> :</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;L&#x27;</span> :</span><br><span class="line">                update(address);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;M&#x27;</span> :</span><br><span class="line">                update(address);</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;S&#x27;</span> :</span><br><span class="line">                update(address);</span><br><span class="line">        &#125;</span><br><span class="line">        update_Lrunumber(); </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//读完后关闭文件</span></span><br><span class="line">    fclose(pFile);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//主函数，处理参数，进行各类函数调用</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">int</span> argc, <span class="type">char</span>* argv[])</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//hit, miss, eviction初始化为0</span></span><br><span class="line">    hit = miss = eviction = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//getopt函数，具体请看用法</span></span><br><span class="line">    <span class="type">int</span> opt;</span><br><span class="line">    <span class="keyword">while</span>(<span class="number">-1</span>!=(opt = (getopt(argc,argv,<span class="string">&quot;hvs:E:b:t:&quot;</span>))))</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">switch</span>(opt)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;E&#x27;</span>:</span><br><span class="line">                E = atoi(optarg);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;s&#x27;</span>:</span><br><span class="line">                s = atoi(optarg);</span><br><span class="line">                S = <span class="number">1</span> &lt;&lt; s;                <span class="comment">// S=2^s</span></span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;b&#x27;</span>:</span><br><span class="line">                b = atoi(optarg);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;t&#x27;</span>:</span><br><span class="line">                <span class="built_in">strcpy</span>(t,optarg);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">default</span> :</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//如果参数不合法，直接退出</span></span><br><span class="line">    <span class="keyword">if</span>(s&lt;=<span class="number">0</span> || E&lt;=<span class="number">0</span> || b&lt;=<span class="number">0</span> || t==<span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    initcache();</span><br><span class="line"></span><br><span class="line">    parse_trace();</span><br><span class="line"></span><br><span class="line">    printSummary(hit, miss, eviction);</span><br><span class="line"></span><br><span class="line">    freecache();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<hr>
-<h3 id="5-结果展示"><a href="#5-结果展示" class="headerlink" title="5.结果展示"></a><strong>5.结果展示</strong></h3><p><img src="/images/2022-05-12-01-34-59.png"></p>
-]]></content>
+    <title>算法定义及复杂度</title>
+    <url>/2022/04/19/%E7%AE%97%E6%B3%95%E5%AE%9A%E4%B9%89%E5%8F%8A%E5%A4%8D%E6%9D%82%E5%BA%A6/</url>
+    <content><![CDATA[]]></content>
       <categories>
-        <category>csapp</category>
+        <category>数据结构</category>
       </categories>
       <tags>
-        <tag>csapp实验</tag>
+        <tag>复杂度</tag>
       </tags>
   </entry>
   <entry>
@@ -535,14 +557,22 @@
       </tags>
   </entry>
   <entry>
-    <title>异常的捕获和处理</title>
-    <url>/2022/07/12/%E5%BC%82%E5%B8%B8%E7%9A%84%E6%8D%95%E8%8E%B7%E5%92%8C%E5%A4%84%E7%90%86/</url>
-    <content><![CDATA[<h3 id="一、"><a href="#一、" class="headerlink" title="一、"></a>一、</h3>]]></content>
+    <title>系统级I/O</title>
+    <url>/2022/04/21/%E7%B3%BB%E7%BB%9F%E7%BA%A7IO/</url>
+    <content><![CDATA[<h2 id="一、UNIT-I-x2F-O"><a href="#一、UNIT-I-x2F-O" class="headerlink" title="一、UNIT I&#x2F;O"></a>一、UNIT I&#x2F;O</h2><p>不带缓存，直接操作<br>网络通信和信号处理程序输出【标准C库不能做】</p>
+<ol>
+<li>open</li>
+</ol>
+<h2 id="二、标准C库I-x2F-O"><a href="#二、标准C库I-x2F-O" class="headerlink" title="二、标准C库I&#x2F;O"></a>二、标准C库I&#x2F;O</h2><p>带缓存</p>
+<ol>
+<li>fopen</li>
+</ol>
+]]></content>
       <categories>
-        <category>JAVA</category>
+        <category>csapp</category>
       </categories>
       <tags>
-        <tag>JAVA</tag>
+        <tag>系统级I/O</tag>
       </tags>
   </entry>
   <entry>
@@ -681,58 +711,70 @@
 <li><p>1、单表查询</p>
 <ul>
 <li><p>Order by:  按一个或多个属性列排序，ASC升序，DESC降序，默认升序</p>
-<ul>
-<li>&#96;&#96;&#96;sql<br>  Select * from student order by sdept,sbirthday DESC  –按系号升序排，同系的按生日降序排  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">* Top x :表示选择的行数</span><br><span class="line">  * ```sql</span><br><span class="line">      Select top 2 sno from student  --查询最前面2个学生学号信息</span><br></pre></td></tr></table></figure></li>
-</ul>
+  <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">Select</span> <span class="operator">*</span> <span class="keyword">from</span> student <span class="keyword">order</span> <span class="keyword">by</span> sdept,sbirthday <span class="keyword">DESC</span>  <span class="comment">--按系号升序排，同系的按生日降序排</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Top x :表示选择的行数</p>
+  <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">Select</span> top <span class="number">2</span> sno <span class="keyword">from</span> student  <span class="comment">--查询最前面2个学生学号信息</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Distinct:取消重复的行</p>
-<ul>
-<li>&#96;&#96;&#96;sql<br>Select distinct sno from score<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">* 查询计算过的值：</span><br><span class="line">  * ```sql</span><br><span class="line">    数值类型：Select sname,2016-year(sbirthday) as sage from student   --输出名字和年龄（当前年份减出生年份）</span><br></pre></td></tr></table></figure></li>
-<li>&#96;&#96;&#96;sql<br>字符类型：select sname+ssex as name_sex from student   –王小二男<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">* 字符串函数：</span><br><span class="line">  * ```sql</span><br><span class="line">    datalength(‘abc’) 返回 3   --字符串长度</span><br></pre></td></tr></table></figure></li>
-<li>&#96;&#96;&#96;sql<br>Right&#x2F;left(‘张三丰’，1) 返回 “张”  –返回字符串最右&#x2F;左第N个字符<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">* 算数函数</span><br><span class="line">    * ```sql</span><br><span class="line">      power(3,2)返回 9</span><br><span class="line">      ```    </span><br><span class="line">    * ```sql</span><br><span class="line">      round(2.56789,2)返回 2.57  --返回小数点后第N位</span><br></pre></td></tr></table></figure>
-<ul>
-<li>&#96;&#96;&#96;sql<br>sqrt(2)返回 1.4142135623731   –返回X的平方根<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">* 日期函数</span><br><span class="line">  * ```sql</span><br><span class="line">    getdate() 返回当前日期</span><br><span class="line">    Year/Month/day（date_expr）获取date_expr的年份/月份/日期</span><br></pre></td></tr></table></figure></li>
-</ul>
+  <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">Select</span> <span class="keyword">distinct</span> sno <span class="keyword">from</span> score</span><br></pre></td></tr></table></figure>
 </li>
-</ul>
+<li><p>查询计算过的值：</p>
+  <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">数值类型：<span class="keyword">Select</span> sname,<span class="number">2016</span><span class="operator">-</span><span class="keyword">year</span>(sbirthday) <span class="keyword">as</span> sage <span class="keyword">from</span> student   <span class="comment">--输出名字和年龄（当前年份减出生年份）</span></span><br></pre></td></tr></table></figure>
+ <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">字符类型：<span class="keyword">select</span> sname<span class="operator">+</span>ssex <span class="keyword">as</span> name_sex <span class="keyword">from</span> student   <span class="comment">--王小二男</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>字符串函数：</p>
+  <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">datalength(‘abc’) 返回 <span class="number">3</span>   <span class="comment">--字符串长度</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">Right</span><span class="operator">/</span><span class="keyword">left</span>(‘张三丰’，<span class="number">1</span>) 返回 “张”  <span class="comment">--返回字符串最右/左第N个字符</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>算数函数</p>
+  <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="built_in">power</span>(<span class="number">3</span>,<span class="number">2</span>)返回 <span class="number">9</span></span><br><span class="line">```    </span><br><span class="line">```<span class="keyword">sql</span></span><br><span class="line">round(<span class="number">2.56789</span>,<span class="number">2</span>)返回 <span class="number">2.57</span>  <span class="comment">--返回小数点后第N位</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sqrt</span>(<span class="number">2</span>)返回 <span class="number">1.4142135623731</span>   <span class="comment">--返回X的平方根</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>日期函数</p>
+  <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">getdate() 返回当前日期</span><br><span class="line"><span class="keyword">Year</span><span class="operator">/</span><span class="keyword">Month</span><span class="operator">/</span><span class="keyword">day</span>（date_expr）获取date_expr的年份<span class="operator">/</span>月份<span class="operator">/</span>日期</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>聚集函数</p>
-<ul>
-<li>&#96;&#96;&#96;sql<br>count（<em>）<br>Select count(</em>) from student –查询学生总人数  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">* ```sql</span><br><span class="line">  Sum(*)</span><br><span class="line">  Select sum(grade) from score --查询所有学生所有课程分数</span><br></pre></td></tr></table></figure></li>
-<li>&#96;&#96;&#96;sql<br>Avg(*)<br>Select avg(grade) from score  –计算学生所有课程的平均成绩<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"> * ```sql</span><br><span class="line">Max/Min(*)</span><br><span class="line">Select max/min(grade) from student  --查询学生最高分数</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
+  <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"> count（<span class="operator">*</span>）</span><br><span class="line"><span class="keyword">Select</span> <span class="built_in">count</span>(<span class="operator">*</span>) <span class="keyword">from</span> student <span class="comment">--查询学生总人数</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Sum</span>(<span class="operator">*</span>)</span><br><span class="line"><span class="keyword">Select</span> <span class="built_in">sum</span>(grade) <span class="keyword">from</span> score <span class="comment">--查询所有学生所有课程分数</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Avg</span>(<span class="operator">*</span>)</span><br><span class="line"><span class="keyword">Select</span> <span class="built_in">avg</span>(grade) <span class="keyword">from</span> score  <span class="comment">--计算学生所有课程的平均成绩</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">Max<span class="operator">/</span><span class="built_in">Min</span>(<span class="operator">*</span>)</span><br><span class="line"><span class="keyword">Select</span> max<span class="operator">/</span><span class="built_in">min</span>(grade) <span class="keyword">from</span> student  <span class="comment">--查询学生最高分数</span></span><br></pre></td></tr></table></figure></li>
 <li><p>Where条件查询</p>
-<ul>
-<li>&#96;&#96;&#96;sql<br>Between…and…<br>Select sname from student where sage not between 20 and 25;   –查询不是20到25岁之间的学生姓名<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"> * ```sql  </span><br><span class="line">In</span><br><span class="line">Select sname from student where sdept not in (&#x27;IS&#x27;,&#x27;MA&#x27;,&#x27;CS&#x27;);  --查询既不是计算机系，也不是数学系，也不是信息系的学生姓名</span><br></pre></td></tr></table></figure></li>
-<li>&#96;&#96;&#96;sql<br>Like<br>%:代表任意长度的字符串<br>  Select sname,sno from  student where sname not like ‘刘%’   –查询不是姓刘的学生的姓名和学号<br>_:代表任意单个字符<br>  Select sname,sno from student where sname like ‘_阳%’  –查询名字第二个字是阳的学生的姓名和学号<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">* ```sql</span><br><span class="line">  IS</span><br><span class="line">Select sno,cno from score where grade is not null   --查询分数不为空的学生的学号和课程号</span><br></pre></td></tr></table></figure></li>
-<li>&#96;&#96;&#96;sql<br>Not&gt;and&gt;or<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">* 2、分组查询</span><br><span class="line">  * Group by</span><br><span class="line">    * ```sql</span><br><span class="line">      select s_id,sum(s_score) from score group by s_id  --查询每个学生所有课程的总分</span><br></pre></td></tr></table></figure></li>
+  <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"> <span class="keyword">Between</span>…<span class="keyword">and</span>…</span><br><span class="line"><span class="keyword">Select</span> sname <span class="keyword">from</span> student <span class="keyword">where</span> sage <span class="keyword">not</span> <span class="keyword">between</span> <span class="number">20</span> <span class="keyword">and</span> <span class="number">25</span>;   <span class="comment">--查询不是20到25岁之间的学生姓名</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">In</span></span><br><span class="line"><span class="keyword">Select</span> sname <span class="keyword">from</span> student <span class="keyword">where</span> sdept <span class="keyword">not</span> <span class="keyword">in</span> (<span class="string">&#x27;IS&#x27;</span>,<span class="string">&#x27;MA&#x27;</span>,<span class="string">&#x27;CS&#x27;</span>);  <span class="comment">--查询既不是计算机系，也不是数学系，也不是信息系的学生姓名</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"> <span class="keyword">Like</span></span><br><span class="line"> <span class="operator">%</span>:代表任意长度的字符串</span><br><span class="line"><span class="keyword">Select</span> sname,sno <span class="keyword">from</span>  student <span class="keyword">where</span> sname <span class="keyword">not</span> <span class="keyword">like</span> <span class="string">&#x27;刘%&#x27;</span>   <span class="comment">--查询不是姓刘的学生的姓名和学号</span></span><br><span class="line"> _:代表任意单个字符</span><br><span class="line"><span class="keyword">Select</span> sname,sno <span class="keyword">from</span> student <span class="keyword">where</span> sname <span class="keyword">like</span> <span class="string">&#x27;_阳%&#x27;</span>  <span class="comment">--查询名字第二个字是阳的学生的姓名和学号</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"> <span class="keyword">IS</span></span><br><span class="line"><span class="keyword">Select</span> sno,cno <span class="keyword">from</span> score <span class="keyword">where</span> grade <span class="keyword">is</span> <span class="keyword">not</span> <span class="keyword">null</span>   <span class="comment">--查询分数不为空的学生的学号和课程号</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">Not</span><span class="operator">&gt;</span><span class="keyword">and</span><span class="operator">&gt;</span><span class="keyword">or</span></span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
-<li><p>Having</p>
+<li><p>2、分组查询</p>
 <ul>
-<li>&#96;&#96;&#96;sql<br>Select s_id,sum(s_score) from score group by s_id having sum(s_score) &gt;&#x3D; 200   –查询所有课程的总分超过200分的学生<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">* 3、多表查询</span><br><span class="line">  * 等值连接略</span><br><span class="line">  * 非等值连接</span><br><span class="line">    * ```sql</span><br><span class="line">      Select a.yname, a.jxj, b.sno, b.cno, b.grade from jxj a, score b where b.grade between a.grade_min and a.grade_max     --从分数表的分数中查询符合奖学金不同奖项分数的学生获奖情况</span><br></pre></td></tr></table></figure></li>
-<li>&#96;&#96;&#96;sql<br>Select a.sno,a.sname from student a, score b where a.sno &#x3D; b.sno and b.cno &#x3D; ‘2’ and b.grade &gt; 90   –查询选修2号课程且分数大于90的学生学号和姓名<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">* 自身连接</span><br><span class="line">  * ```sql</span><br><span class="line"> Select first.cno,second.cpno from course first,course second where first.cpno = second.cno  --查询每一门课的间接先修课</span><br></pre></td></tr></table></figure></li>
+<li>Group by  <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> s_id,<span class="built_in">sum</span>(s_score) <span class="keyword">from</span> score <span class="keyword">group</span> <span class="keyword">by</span> s_id  <span class="comment">--查询每个学生所有课程的总分</span></span><br></pre></td></tr></table></figure></li>
+<li>Having  <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">Select</span> s_id,<span class="built_in">sum</span>(s_score) <span class="keyword">from</span> score <span class="keyword">group</span> <span class="keyword">by</span> s_id <span class="keyword">having</span> <span class="built_in">sum</span>(s_score) <span class="operator">&gt;=</span> <span class="number">200</span>   <span class="comment">--查询所有课程的总分超过200分的学生</span></span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
-<li><p>外连接</p>
+<li><p>3、多表查询</p>
 <ul>
-<li>&#96;&#96;&#96;sql<br>Join…on<br>表 Left join 表 on  –列出左边关系中的所有元组<br>表 right join 表 on  –列出右边关系中的所有元组<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">* 多表连接</span><br><span class="line">  * ```sql</span><br><span class="line"> Select student.sno, sname, cname, grade from student, score, course where student.sno = score.sno and score.cno = course.cno    --查询每个学生的学号，姓名，选修的课程名及成绩</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
+<li>等值连接略</li>
+<li>非等值连接  <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">Select</span> a.yname, a.jxj, b.sno, b.cno, b.grade <span class="keyword">from</span> jxj a, score b <span class="keyword">where</span> b.grade <span class="keyword">between</span> a.grade_min <span class="keyword">and</span> a.grade_max     <span class="comment">--从分数表的分数中查询符合奖学金不同奖项分数的学生获奖情况</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">Select</span> a.sno,a.sname <span class="keyword">from</span> student a, score b <span class="keyword">where</span> a.sno <span class="operator">=</span> b.sno <span class="keyword">and</span> b.cno <span class="operator">=</span> <span class="string">&#x27;2&#x27;</span> <span class="keyword">and</span> b.grade <span class="operator">&gt;</span> <span class="number">90</span>   <span class="comment">--查询选修2号课程且分数大于90的学生学号和姓名</span></span><br></pre></td></tr></table></figure></li>
+<li>自身连接  <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">Select</span> first.cno,second.cpno <span class="keyword">from</span> course <span class="keyword">first</span>,course <span class="keyword">second</span> <span class="keyword">where</span> first.cpno <span class="operator">=</span> second.cno  <span class="comment">--查询每一门课的间接先修课</span></span><br></pre></td></tr></table></figure></li>
+<li>外连接  <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">Join</span>…<span class="keyword">on</span></span><br><span class="line">表 <span class="keyword">Left</span> <span class="keyword">join</span> 表 <span class="keyword">on</span>  <span class="comment">--列出左边关系中的所有元组</span></span><br><span class="line">表 <span class="keyword">right</span> <span class="keyword">join</span> 表 <span class="keyword">on</span>  <span class="comment">--列出右边关系中的所有元组</span></span><br></pre></td></tr></table></figure></li>
+<li>多表连接  <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">Select</span> student.sno, sname, cname, grade <span class="keyword">from</span> student, score, course <span class="keyword">where</span> student.sno <span class="operator">=</span> score.sno <span class="keyword">and</span> score.cno <span class="operator">=</span> course.cno    <span class="comment">--查询每个学生的学号，姓名，选修的课程名及成绩</span></span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
 <li><p>4、子查询</p>
 <ul>
 <li>集合查询<ul>
-<li>并（union）<ul>
-<li>&#96;&#96;&#96;sql<br>Select sno from score where cno &#x3D; 2 union all (select sno from score where cno &#x3D; 3)  –查询选修了课程号为2和3的学号  （没有all则去掉重复内容）<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">* 交（intersect）</span><br><span class="line">     * ```sql</span><br><span class="line">	Select * from student where sex=&#x27;男&#x27; intersect select * from student where sdept=&#x27;CS&#x27;   --查询计算机系的男生的信息</span><br></pre></td></tr></table></figure></li>
+<li>并（union）<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">Select</span> sno <span class="keyword">from</span> score <span class="keyword">where</span> cno <span class="operator">=</span> <span class="number">2</span> <span class="keyword">union</span> <span class="keyword">all</span> (<span class="keyword">select</span> sno <span class="keyword">from</span> score <span class="keyword">where</span> cno <span class="operator">=</span> <span class="number">3</span>)  <span class="comment">--查询选修了课程号为2和3的学号  （没有all则去掉重复内容）</span></span><br></pre></td></tr></table></figure></li>
+<li>交（intersect）<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">Select</span> <span class="operator">*</span> <span class="keyword">from</span> student <span class="keyword">where</span> sex<span class="operator">=</span><span class="string">&#x27;男&#x27;</span> <span class="keyword">intersect</span> <span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> student <span class="keyword">where</span> sdept<span class="operator">=</span><span class="string">&#x27;CS&#x27;</span>   <span class="comment">--查询计算机系的男生的信息</span></span><br></pre></td></tr></table></figure></li>
+<li>差（except）【在第一个结果集中，但是不在第二个结果集】<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">（<span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> student <span class="keyword">where</span> sdept <span class="operator">!=</span><span class="string">&#x27;CS&#x27;</span>）<span class="keyword">except</span> <span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> student <span class="keyword">where</span> sex <span class="operator">=</span><span class="string">&#x27;男&#x27;</span>   <span class="comment">--查询非计算机系的非男生信息</span></span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
-<li>差（except）【在第一个结果集中，但是不在第二个结果集】<ul>
-<li>&#96;&#96;&#96;sql<br>（select * from student where sdept !&#x3D;’CS’）except select * from student where sex &#x3D;’男’   –查询非计算机系的非男生信息<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">* 嵌套查询</span><br><span class="line">  * 子查询不能使用compute[by] 和 into子句</span><br><span class="line">  * 子查询的select语句不能使用image、text和ntext数据类型</span><br><span class="line">  * 带IN的嵌套查询</span><br><span class="line">    * ```sql</span><br><span class="line">      Select * from student where sdept in (select sdept from student where sname = &#x27;王敏&#x27;)   --查询与王敏同系的所有学生信息</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
+<li>嵌套查询<ul>
+<li>子查询不能使用compute[by] 和 into子句</li>
+<li>子查询的select语句不能使用image、text和ntext数据类型</li>
+<li>带IN的嵌套查询  <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">Select</span> <span class="operator">*</span> <span class="keyword">from</span> student <span class="keyword">where</span> sdept <span class="keyword">in</span> (<span class="keyword">select</span> sdept <span class="keyword">from</span> student <span class="keyword">where</span> sname <span class="operator">=</span> <span class="string">&#x27;王敏&#x27;</span>)   <span class="comment">--查询与王敏同系的所有学生信息</span></span><br></pre></td></tr></table></figure></li>
 <li>带比较的<ul>
 <li>§ &gt;, &lt;  &#x3D;</li>
 </ul>
@@ -746,17 +788,12 @@
 </ul>
 </li>
 <li><p>5、插入新记录</p>
-<ul>
-<li>&#96;&#96;&#96;sql<br>use qimo<br>insert into student values (‘101’,’王小二’,’男’,’2000-10-01’,’广东佛山狮山大道碧海湾2栋1001’,’’)<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">* 6、更新数据库数据</span><br><span class="line">  * ```sql</span><br><span class="line">    update student set s_entrancetime = &#x27;2022-01-05&#x27; where s_id = &#x27;101&#x27;</span><br></pre></td></tr></table></figure></li>
-</ul>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">use qimo</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> student <span class="keyword">values</span> (<span class="string">&#x27;101&#x27;</span>,<span class="string">&#x27;王小二&#x27;</span>,<span class="string">&#x27;男&#x27;</span>,<span class="string">&#x27;2000-10-01&#x27;</span>,<span class="string">&#x27;广东佛山狮山大道碧海湾2栋1001&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br></pre></td></tr></table></figure>
 </li>
+<li><p>6、更新数据库数据</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">update</span> student <span class="keyword">set</span> s_entrancetime <span class="operator">=</span> <span class="string">&#x27;2022-01-05&#x27;</span> <span class="keyword">where</span> s_id <span class="operator">=</span> <span class="string">&#x27;101&#x27;</span></span><br></pre></td></tr></table></figure></li>
 <li><p>7、删除特定数据</p>
-<ul>
-<li><pre><code class="sql">delete from student where s_id = &#39;101&#39;     --删除数据是以行为单位
-</code></pre>
-</li>
-</ul>
-</li>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">delete</span> <span class="keyword">from</span> student <span class="keyword">where</span> s_id <span class="operator">=</span> <span class="string">&#x27;101&#x27;</span>     <span class="comment">--删除数据是以行为单位</span></span><br></pre></td></tr></table></figure></li>
 </ul>
 ]]></content>
       <categories>
@@ -764,36 +801,6 @@
       </categories>
       <tags>
         <tag>SQL语法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>系统级I/O</title>
-    <url>/2022/04/21/%E7%B3%BB%E7%BB%9F%E7%BA%A7IO/</url>
-    <content><![CDATA[<h2 id="一、UNIT-I-x2F-O"><a href="#一、UNIT-I-x2F-O" class="headerlink" title="一、UNIT I&#x2F;O"></a>一、UNIT I&#x2F;O</h2><p>不带缓存，直接操作<br>网络通信和信号处理程序输出【标准C库不能做】</p>
-<ol>
-<li>open</li>
-</ol>
-<h2 id="二、标准C库I-x2F-O"><a href="#二、标准C库I-x2F-O" class="headerlink" title="二、标准C库I&#x2F;O"></a>二、标准C库I&#x2F;O</h2><p>带缓存</p>
-<ol>
-<li>fopen</li>
-</ol>
-]]></content>
-      <categories>
-        <category>csapp</category>
-      </categories>
-      <tags>
-        <tag>系统级I/O</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>算法定义及复杂度</title>
-    <url>/2022/04/19/%E7%AE%97%E6%B3%95%E5%AE%9A%E4%B9%89%E5%8F%8A%E5%A4%8D%E6%9D%82%E5%BA%A6/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>数据结构</category>
-      </categories>
-      <tags>
-        <tag>复杂度</tag>
       </tags>
   </entry>
   <entry>
@@ -821,18 +828,6 @@
       </tags>
   </entry>
   <entry>
-    <title>数组的基本概念</title>
-    <url>/2022/04/19/%E7%BA%BF%E6%80%A7%E8%A1%A8-%E6%95%B0%E7%BB%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>数据结构</category>
-      </categories>
-      <tags>
-        <tag>线性表</tag>
-        <tag>数组</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>链表的基本概念</title>
     <url>/2022/04/19/%E7%BA%BF%E6%80%A7%E8%A1%A8-%E9%93%BE%E8%A1%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</url>
     <content><![CDATA[]]></content>
@@ -845,20 +840,15 @@
       </tags>
   </entry>
   <entry>
-    <title>虚拟内存</title>
-    <url>/2022/05/16/%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98%E8%AF%A6%E8%A7%A3/</url>
-    <content><![CDATA[<p>先映射到物理内存，之后分配给程序使用</p>
-<p>虚拟内存提供了三个重要的能力：<br>一、虚拟内存将主存看成是一个存储在磁盘上的地址空间的高速存储，在主存中只保存活动区域，并根据需要在磁盘和主存之间来回传送数据，通过这种方式，虚拟内存高效使用主存；二、虚拟内存为每个进程提供了一致的地址空间，从而简化了内存管理；三、虚拟内存保护了每个进程的地址空间不被其他进程破坏。</p>
-<h3 id="一、物理内存和虚拟内存"><a href="#一、物理内存和虚拟内存" class="headerlink" title="一、物理内存和虚拟内存"></a>一、物理内存和虚拟内存</h3><h3 id="二、Linux虚拟内存-amp-内存映射"><a href="#二、Linux虚拟内存-amp-内存映射" class="headerlink" title="二、Linux虚拟内存&amp;内存映射"></a>二、Linux虚拟内存&amp;内存映射</h3><p>liunx为每个进程维护一个单独的虚拟地址空间</p>
-<h3 id="三、动态内存分配"><a href="#三、动态内存分配" class="headerlink" title="三、动态内存分配"></a>三、动态内存分配</h3><p>动态内存分配器（对堆的管理，从堆里面划分区域，一定是连续的）维护着一个进程的虚拟内存区域，称为堆（heap）。紧接未初始化的数据区域后面开始向上（高地址增长）。对于每一个进程，内核维护者一个变量brk（break），它指向堆的顶部。<br>显式分配器：malloc函数 和 free函数<br>隐式分配器：也叫做垃圾收集器，自动释放不再使用的块，例如java</p>
-<p>要考虑数据对齐<br>32位malloc返回8的倍数（long是8字节），64位返回16的倍数（long是16字节）<br>为什么要对齐？<br>不知道要存放什么数据，最坏打算：任何数据（最大的数据类型），保证了你的缓存<br>L1和L2是以块来通信，一个long（8个字节）的数据，不能存在于两个块，数据的存储是一个完整的数据，不能跨块或跨页保存（否则出现加载一个块可能不满足获取数据要求）</p>
-<p>释放<br>不是清空，是标记为空闲，可以再次使用，再次使用时需要初始化</p>
-]]></content>
+    <title>数组的基本概念</title>
+    <url>/2022/04/19/%E7%BA%BF%E6%80%A7%E8%A1%A8-%E6%95%B0%E7%BB%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</url>
+    <content><![CDATA[]]></content>
       <categories>
-        <category>csapp</category>
+        <category>数据结构</category>
       </categories>
       <tags>
-        <tag>虚拟内存</tag>
+        <tag>线性表</tag>
+        <tag>数组</tag>
       </tags>
   </entry>
   <entry>
@@ -967,18 +957,20 @@
       </tags>
   </entry>
   <entry>
-    <title>赫夫曼树</title>
-    <url>/2022/04/19/%E8%B5%AB%E5%A4%AB%E6%9B%BC%E6%A0%91/</url>
-    <content><![CDATA[<h2 id="一、赫夫曼树的定义"><a href="#一、赫夫曼树的定义" class="headerlink" title="一、赫夫曼树的定义"></a>一、赫夫曼树的定义</h2><blockquote>
-<p>没有度为1的结点，只有度为0或2的结点</p>
-</blockquote>
-<hr>
-<h2 id="二、赫夫曼编码"><a href="#二、赫夫曼编码" class="headerlink" title="二、赫夫曼编码"></a>二、赫夫曼编码</h2>]]></content>
+    <title>虚拟内存</title>
+    <url>/2022/05/16/%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98%E8%AF%A6%E8%A7%A3/</url>
+    <content><![CDATA[<p>先映射到物理内存，之后分配给程序使用</p>
+<p>虚拟内存提供了三个重要的能力：<br>一、虚拟内存将主存看成是一个存储在磁盘上的地址空间的高速存储，在主存中只保存活动区域，并根据需要在磁盘和主存之间来回传送数据，通过这种方式，虚拟内存高效使用主存；二、虚拟内存为每个进程提供了一致的地址空间，从而简化了内存管理；三、虚拟内存保护了每个进程的地址空间不被其他进程破坏。</p>
+<h3 id="一、物理内存和虚拟内存"><a href="#一、物理内存和虚拟内存" class="headerlink" title="一、物理内存和虚拟内存"></a>一、物理内存和虚拟内存</h3><h3 id="二、Linux虚拟内存-amp-内存映射"><a href="#二、Linux虚拟内存-amp-内存映射" class="headerlink" title="二、Linux虚拟内存&amp;内存映射"></a>二、Linux虚拟内存&amp;内存映射</h3><p>liunx为每个进程维护一个单独的虚拟地址空间</p>
+<h3 id="三、动态内存分配"><a href="#三、动态内存分配" class="headerlink" title="三、动态内存分配"></a>三、动态内存分配</h3><p>动态内存分配器（对堆的管理，从堆里面划分区域，一定是连续的）维护着一个进程的虚拟内存区域，称为堆（heap）。紧接未初始化的数据区域后面开始向上（高地址增长）。对于每一个进程，内核维护者一个变量brk（break），它指向堆的顶部。<br>显式分配器：malloc函数 和 free函数<br>隐式分配器：也叫做垃圾收集器，自动释放不再使用的块，例如java</p>
+<p>要考虑数据对齐<br>32位malloc返回8的倍数（long是8字节），64位返回16的倍数（long是16字节）<br>为什么要对齐？<br>不知道要存放什么数据，最坏打算：任何数据（最大的数据类型），保证了你的缓存<br>L1和L2是以块来通信，一个long（8个字节）的数据，不能存在于两个块，数据的存储是一个完整的数据，不能跨块或跨页保存（否则出现加载一个块可能不满足获取数据要求）</p>
+<p>释放<br>不是清空，是标记为空闲，可以再次使用，再次使用时需要初始化</p>
+]]></content>
       <categories>
-        <category>数据结构</category>
+        <category>csapp</category>
       </categories>
       <tags>
-        <tag>二叉树</tag>
+        <tag>虚拟内存</tag>
       </tags>
   </entry>
   <entry>
@@ -991,6 +983,21 @@
       <tags>
         <tag>概念</tag>
         <tag>队列</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>赫夫曼树</title>
+    <url>/2022/04/19/%E8%B5%AB%E5%A4%AB%E6%9B%BC%E6%A0%91/</url>
+    <content><![CDATA[<h2 id="一、赫夫曼树的定义"><a href="#一、赫夫曼树的定义" class="headerlink" title="一、赫夫曼树的定义"></a>一、赫夫曼树的定义</h2><blockquote>
+<p>没有度为1的结点，只有度为0或2的结点</p>
+</blockquote>
+<hr>
+<h2 id="二、赫夫曼编码"><a href="#二、赫夫曼编码" class="headerlink" title="二、赫夫曼编码"></a>二、赫夫曼编码</h2>]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>二叉树</tag>
       </tags>
   </entry>
   <entry>

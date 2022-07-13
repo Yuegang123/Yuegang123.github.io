@@ -731,9 +731,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2022-07-12 11:00:00 / 修改时间：22:04:19" itemprop="dateCreated datePublished" datetime="2022-07-12T11:00:00+08:00">2022-07-12</time>
+      <time title="创建时间：2022-07-12 11:00:00" itemprop="dateCreated datePublished" datetime="2022-07-12T11:00:00+08:00">2022-07-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-07-13 08:13:04" itemprop="dateModified" datetime="2022-07-13T08:13:04+08:00">2022-07-13</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -752,7 +758,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>4.6k</span>
+      <span>4.3k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -844,58 +850,70 @@
 <li><p>1、单表查询</p>
 <ul>
 <li><p>Order by:  按一个或多个属性列排序，ASC升序，DESC降序，默认升序</p>
-<ul>
-<li>&#96;&#96;&#96;sql<br>  Select * from student order by sdept,sbirthday DESC  –按系号升序排，同系的按生日降序排  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">* Top x :表示选择的行数</span><br><span class="line">  * ```sql</span><br><span class="line">      Select top 2 sno from student  --查询最前面2个学生学号信息</span><br></pre></td></tr></table></figure></li>
-</ul>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Select</span> <span class="operator">*</span> <span class="keyword">from</span> student <span class="keyword">order</span> <span class="keyword">by</span> sdept,sbirthday <span class="keyword">DESC</span>  <span class="comment">--按系号升序排，同系的按生日降序排</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Top x :表示选择的行数</p>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Select</span> top <span class="number">2</span> sno <span class="keyword">from</span> student  <span class="comment">--查询最前面2个学生学号信息</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Distinct:取消重复的行</p>
-<ul>
-<li>&#96;&#96;&#96;sql<br>Select distinct sno from score<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">* 查询计算过的值：</span><br><span class="line">  * ```sql</span><br><span class="line">    数值类型：Select sname,2016-year(sbirthday) as sage from student   --输出名字和年龄（当前年份减出生年份）</span><br></pre></td></tr></table></figure></li>
-<li>&#96;&#96;&#96;sql<br>字符类型：select sname+ssex as name_sex from student   –王小二男<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">* 字符串函数：</span><br><span class="line">  * ```sql</span><br><span class="line">    datalength(‘abc’) 返回 3   --字符串长度</span><br></pre></td></tr></table></figure></li>
-<li>&#96;&#96;&#96;sql<br>Right&#x2F;left(‘张三丰’，1) 返回 “张”  –返回字符串最右&#x2F;左第N个字符<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">* 算数函数</span><br><span class="line">    * ```sql</span><br><span class="line">      power(3,2)返回 9</span><br><span class="line">      ```    </span><br><span class="line">    * ```sql</span><br><span class="line">      round(2.56789,2)返回 2.57  --返回小数点后第N位</span><br></pre></td></tr></table></figure>
-<ul>
-<li>&#96;&#96;&#96;sql<br>sqrt(2)返回 1.4142135623731   –返回X的平方根<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">* 日期函数</span><br><span class="line">  * ```sql</span><br><span class="line">    getdate() 返回当前日期</span><br><span class="line">    Year/Month/day（date_expr）获取date_expr的年份/月份/日期</span><br></pre></td></tr></table></figure></li>
-</ul>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Select</span> <span class="keyword">distinct</span> sno <span class="keyword">from</span> score</span><br></pre></td></tr></table></figure>
 </li>
-</ul>
+<li><p>查询计算过的值：</p>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">数值类型：<span class="keyword">Select</span> sname,<span class="number">2016</span><span class="operator">-</span><span class="keyword">year</span>(sbirthday) <span class="keyword">as</span> sage <span class="keyword">from</span> student   <span class="comment">--输出名字和年龄（当前年份减出生年份）</span></span><br></pre></td></tr></table></figure>
+ <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">字符类型：<span class="keyword">select</span> sname<span class="operator">+</span>ssex <span class="keyword">as</span> name_sex <span class="keyword">from</span> student   <span class="comment">--王小二男</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>字符串函数：</p>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">datalength(‘abc’) 返回 <span class="number">3</span>   <span class="comment">--字符串长度</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Right</span><span class="operator">/</span><span class="keyword">left</span>(‘张三丰’，<span class="number">1</span>) 返回 “张”  <span class="comment">--返回字符串最右/左第N个字符</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>算数函数</p>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">power</span>(<span class="number">3</span>,<span class="number">2</span>)返回 <span class="number">9</span></span><br><span class="line">```    </span><br><span class="line">```<span class="keyword">sql</span></span><br><span class="line">round(<span class="number">2.56789</span>,<span class="number">2</span>)返回 <span class="number">2.57</span>  <span class="comment">--返回小数点后第N位</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sqrt</span>(<span class="number">2</span>)返回 <span class="number">1.4142135623731</span>   <span class="comment">--返回X的平方根</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>日期函数</p>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">getdate() 返回当前日期</span><br><span class="line"><span class="keyword">Year</span><span class="operator">/</span><span class="keyword">Month</span><span class="operator">/</span><span class="keyword">day</span>（date_expr）获取date_expr的年份<span class="operator">/</span>月份<span class="operator">/</span>日期</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>聚集函数</p>
-<ul>
-<li>&#96;&#96;&#96;sql<br>count（<em>）<br>Select count(</em>) from student –查询学生总人数  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* ```sql</span><br><span class="line">  Sum(*)</span><br><span class="line">  Select sum(grade) from score --查询所有学生所有课程分数</span><br></pre></td></tr></table></figure></li>
-<li>&#96;&#96;&#96;sql<br>Avg(*)<br>Select avg(grade) from score  –计算学生所有课程的平均成绩<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> * ```sql</span><br><span class="line">Max/Min(*)</span><br><span class="line">Select max/min(grade) from student  --查询学生最高分数</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> count（<span class="operator">*</span>）</span><br><span class="line"><span class="keyword">Select</span> <span class="built_in">count</span>(<span class="operator">*</span>) <span class="keyword">from</span> student <span class="comment">--查询学生总人数</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Sum</span>(<span class="operator">*</span>)</span><br><span class="line"><span class="keyword">Select</span> <span class="built_in">sum</span>(grade) <span class="keyword">from</span> score <span class="comment">--查询所有学生所有课程分数</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Avg</span>(<span class="operator">*</span>)</span><br><span class="line"><span class="keyword">Select</span> <span class="built_in">avg</span>(grade) <span class="keyword">from</span> score  <span class="comment">--计算学生所有课程的平均成绩</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Max<span class="operator">/</span><span class="built_in">Min</span>(<span class="operator">*</span>)</span><br><span class="line"><span class="keyword">Select</span> max<span class="operator">/</span><span class="built_in">min</span>(grade) <span class="keyword">from</span> student  <span class="comment">--查询学生最高分数</span></span><br></pre></td></tr></table></figure></li>
 <li><p>Where条件查询</p>
-<ul>
-<li>&#96;&#96;&#96;sql<br>Between…and…<br>Select sname from student where sage not between 20 and 25;   –查询不是20到25岁之间的学生姓名<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> * ```sql  </span><br><span class="line">In</span><br><span class="line">Select sname from student where sdept not in (&#x27;IS&#x27;,&#x27;MA&#x27;,&#x27;CS&#x27;);  --查询既不是计算机系，也不是数学系，也不是信息系的学生姓名</span><br></pre></td></tr></table></figure></li>
-<li>&#96;&#96;&#96;sql<br>Like<br>%:代表任意长度的字符串<br>  Select sname,sno from  student where sname not like ‘刘%’   –查询不是姓刘的学生的姓名和学号<br>_:代表任意单个字符<br>  Select sname,sno from student where sname like ‘_阳%’  –查询名字第二个字是阳的学生的姓名和学号<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* ```sql</span><br><span class="line">  IS</span><br><span class="line">Select sno,cno from score where grade is not null   --查询分数不为空的学生的学号和课程号</span><br></pre></td></tr></table></figure></li>
-<li>&#96;&#96;&#96;sql<br>Not&gt;and&gt;or<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">* 2、分组查询</span><br><span class="line">  * Group by</span><br><span class="line">    * ```sql</span><br><span class="line">      select s_id,sum(s_score) from score group by s_id  --查询每个学生所有课程的总分</span><br></pre></td></tr></table></figure></li>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">Between</span>…<span class="keyword">and</span>…</span><br><span class="line"><span class="keyword">Select</span> sname <span class="keyword">from</span> student <span class="keyword">where</span> sage <span class="keyword">not</span> <span class="keyword">between</span> <span class="number">20</span> <span class="keyword">and</span> <span class="number">25</span>;   <span class="comment">--查询不是20到25岁之间的学生姓名</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">In</span></span><br><span class="line"><span class="keyword">Select</span> sname <span class="keyword">from</span> student <span class="keyword">where</span> sdept <span class="keyword">not</span> <span class="keyword">in</span> (<span class="string">&#x27;IS&#x27;</span>,<span class="string">&#x27;MA&#x27;</span>,<span class="string">&#x27;CS&#x27;</span>);  <span class="comment">--查询既不是计算机系，也不是数学系，也不是信息系的学生姓名</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">Like</span></span><br><span class="line"> <span class="operator">%</span>:代表任意长度的字符串</span><br><span class="line"><span class="keyword">Select</span> sname,sno <span class="keyword">from</span>  student <span class="keyword">where</span> sname <span class="keyword">not</span> <span class="keyword">like</span> <span class="string">&#x27;刘%&#x27;</span>   <span class="comment">--查询不是姓刘的学生的姓名和学号</span></span><br><span class="line"> _:代表任意单个字符</span><br><span class="line"><span class="keyword">Select</span> sname,sno <span class="keyword">from</span> student <span class="keyword">where</span> sname <span class="keyword">like</span> <span class="string">&#x27;_阳%&#x27;</span>  <span class="comment">--查询名字第二个字是阳的学生的姓名和学号</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">IS</span></span><br><span class="line"><span class="keyword">Select</span> sno,cno <span class="keyword">from</span> score <span class="keyword">where</span> grade <span class="keyword">is</span> <span class="keyword">not</span> <span class="keyword">null</span>   <span class="comment">--查询分数不为空的学生的学号和课程号</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Not</span><span class="operator">&gt;</span><span class="keyword">and</span><span class="operator">&gt;</span><span class="keyword">or</span></span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
-<li><p>Having</p>
+<li><p>2、分组查询</p>
 <ul>
-<li>&#96;&#96;&#96;sql<br>Select s_id,sum(s_score) from score group by s_id having sum(s_score) &gt;&#x3D; 200   –查询所有课程的总分超过200分的学生<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">* 3、多表查询</span><br><span class="line">  * 等值连接略</span><br><span class="line">  * 非等值连接</span><br><span class="line">    * ```sql</span><br><span class="line">      Select a.yname, a.jxj, b.sno, b.cno, b.grade from jxj a, score b where b.grade between a.grade_min and a.grade_max     --从分数表的分数中查询符合奖学金不同奖项分数的学生获奖情况</span><br></pre></td></tr></table></figure></li>
-<li>&#96;&#96;&#96;sql<br>Select a.sno,a.sname from student a, score b where a.sno &#x3D; b.sno and b.cno &#x3D; ‘2’ and b.grade &gt; 90   –查询选修2号课程且分数大于90的学生学号和姓名<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* 自身连接</span><br><span class="line">  * ```sql</span><br><span class="line"> Select first.cno,second.cpno from course first,course second where first.cpno = second.cno  --查询每一门课的间接先修课</span><br></pre></td></tr></table></figure></li>
+<li>Group by  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> s_id,<span class="built_in">sum</span>(s_score) <span class="keyword">from</span> score <span class="keyword">group</span> <span class="keyword">by</span> s_id  <span class="comment">--查询每个学生所有课程的总分</span></span><br></pre></td></tr></table></figure></li>
+<li>Having  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Select</span> s_id,<span class="built_in">sum</span>(s_score) <span class="keyword">from</span> score <span class="keyword">group</span> <span class="keyword">by</span> s_id <span class="keyword">having</span> <span class="built_in">sum</span>(s_score) <span class="operator">&gt;=</span> <span class="number">200</span>   <span class="comment">--查询所有课程的总分超过200分的学生</span></span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
-<li><p>外连接</p>
+<li><p>3、多表查询</p>
 <ul>
-<li>&#96;&#96;&#96;sql<br>Join…on<br>表 Left join 表 on  –列出左边关系中的所有元组<br>表 right join 表 on  –列出右边关系中的所有元组<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* 多表连接</span><br><span class="line">  * ```sql</span><br><span class="line"> Select student.sno, sname, cname, grade from student, score, course where student.sno = score.sno and score.cno = course.cno    --查询每个学生的学号，姓名，选修的课程名及成绩</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
+<li>等值连接略</li>
+<li>非等值连接  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Select</span> a.yname, a.jxj, b.sno, b.cno, b.grade <span class="keyword">from</span> jxj a, score b <span class="keyword">where</span> b.grade <span class="keyword">between</span> a.grade_min <span class="keyword">and</span> a.grade_max     <span class="comment">--从分数表的分数中查询符合奖学金不同奖项分数的学生获奖情况</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Select</span> a.sno,a.sname <span class="keyword">from</span> student a, score b <span class="keyword">where</span> a.sno <span class="operator">=</span> b.sno <span class="keyword">and</span> b.cno <span class="operator">=</span> <span class="string">&#x27;2&#x27;</span> <span class="keyword">and</span> b.grade <span class="operator">&gt;</span> <span class="number">90</span>   <span class="comment">--查询选修2号课程且分数大于90的学生学号和姓名</span></span><br></pre></td></tr></table></figure></li>
+<li>自身连接  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Select</span> first.cno,second.cpno <span class="keyword">from</span> course <span class="keyword">first</span>,course <span class="keyword">second</span> <span class="keyword">where</span> first.cpno <span class="operator">=</span> second.cno  <span class="comment">--查询每一门课的间接先修课</span></span><br></pre></td></tr></table></figure></li>
+<li>外连接  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Join</span>…<span class="keyword">on</span></span><br><span class="line">表 <span class="keyword">Left</span> <span class="keyword">join</span> 表 <span class="keyword">on</span>  <span class="comment">--列出左边关系中的所有元组</span></span><br><span class="line">表 <span class="keyword">right</span> <span class="keyword">join</span> 表 <span class="keyword">on</span>  <span class="comment">--列出右边关系中的所有元组</span></span><br></pre></td></tr></table></figure></li>
+<li>多表连接  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Select</span> student.sno, sname, cname, grade <span class="keyword">from</span> student, score, course <span class="keyword">where</span> student.sno <span class="operator">=</span> score.sno <span class="keyword">and</span> score.cno <span class="operator">=</span> course.cno    <span class="comment">--查询每个学生的学号，姓名，选修的课程名及成绩</span></span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
 <li><p>4、子查询</p>
 <ul>
 <li>集合查询<ul>
-<li>并（union）<ul>
-<li>&#96;&#96;&#96;sql<br>Select sno from score where cno &#x3D; 2 union all (select sno from score where cno &#x3D; 3)  –查询选修了课程号为2和3的学号  （没有all则去掉重复内容）<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* 交（intersect）</span><br><span class="line">     * ```sql</span><br><span class="line">	Select * from student where sex=&#x27;男&#x27; intersect select * from student where sdept=&#x27;CS&#x27;   --查询计算机系的男生的信息</span><br></pre></td></tr></table></figure></li>
+<li>并（union）<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Select</span> sno <span class="keyword">from</span> score <span class="keyword">where</span> cno <span class="operator">=</span> <span class="number">2</span> <span class="keyword">union</span> <span class="keyword">all</span> (<span class="keyword">select</span> sno <span class="keyword">from</span> score <span class="keyword">where</span> cno <span class="operator">=</span> <span class="number">3</span>)  <span class="comment">--查询选修了课程号为2和3的学号  （没有all则去掉重复内容）</span></span><br></pre></td></tr></table></figure></li>
+<li>交（intersect）<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Select</span> <span class="operator">*</span> <span class="keyword">from</span> student <span class="keyword">where</span> sex<span class="operator">=</span><span class="string">&#x27;男&#x27;</span> <span class="keyword">intersect</span> <span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> student <span class="keyword">where</span> sdept<span class="operator">=</span><span class="string">&#x27;CS&#x27;</span>   <span class="comment">--查询计算机系的男生的信息</span></span><br></pre></td></tr></table></figure></li>
+<li>差（except）【在第一个结果集中，但是不在第二个结果集】<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">（<span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> student <span class="keyword">where</span> sdept <span class="operator">!=</span><span class="string">&#x27;CS&#x27;</span>）<span class="keyword">except</span> <span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> student <span class="keyword">where</span> sex <span class="operator">=</span><span class="string">&#x27;男&#x27;</span>   <span class="comment">--查询非计算机系的非男生信息</span></span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
-<li>差（except）【在第一个结果集中，但是不在第二个结果集】<ul>
-<li>&#96;&#96;&#96;sql<br>（select * from student where sdept !&#x3D;’CS’）except select * from student where sex &#x3D;’男’   –查询非计算机系的非男生信息<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">* 嵌套查询</span><br><span class="line">  * 子查询不能使用compute[by] 和 into子句</span><br><span class="line">  * 子查询的select语句不能使用image、text和ntext数据类型</span><br><span class="line">  * 带IN的嵌套查询</span><br><span class="line">    * ```sql</span><br><span class="line">      Select * from student where sdept in (select sdept from student where sname = &#x27;王敏&#x27;)   --查询与王敏同系的所有学生信息</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
+<li>嵌套查询<ul>
+<li>子查询不能使用compute[by] 和 into子句</li>
+<li>子查询的select语句不能使用image、text和ntext数据类型</li>
+<li>带IN的嵌套查询  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Select</span> <span class="operator">*</span> <span class="keyword">from</span> student <span class="keyword">where</span> sdept <span class="keyword">in</span> (<span class="keyword">select</span> sdept <span class="keyword">from</span> student <span class="keyword">where</span> sname <span class="operator">=</span> <span class="string">&#x27;王敏&#x27;</span>)   <span class="comment">--查询与王敏同系的所有学生信息</span></span><br></pre></td></tr></table></figure></li>
 <li>带比较的<ul>
 <li>§ &gt;, &lt;  &#x3D;</li>
 </ul>
@@ -909,17 +927,12 @@
 </ul>
 </li>
 <li><p>5、插入新记录</p>
-<ul>
-<li>&#96;&#96;&#96;sql<br>use qimo<br>insert into student values (‘101’,’王小二’,’男’,’2000-10-01’,’广东佛山狮山大道碧海湾2栋1001’,’’)<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">* 6、更新数据库数据</span><br><span class="line">  * ```sql</span><br><span class="line">    update student set s_entrancetime = &#x27;2022-01-05&#x27; where s_id = &#x27;101&#x27;</span><br></pre></td></tr></table></figure></li>
-</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">use qimo</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> student <span class="keyword">values</span> (<span class="string">&#x27;101&#x27;</span>,<span class="string">&#x27;王小二&#x27;</span>,<span class="string">&#x27;男&#x27;</span>,<span class="string">&#x27;2000-10-01&#x27;</span>,<span class="string">&#x27;广东佛山狮山大道碧海湾2栋1001&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br></pre></td></tr></table></figure>
 </li>
+<li><p>6、更新数据库数据</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">update</span> student <span class="keyword">set</span> s_entrancetime <span class="operator">=</span> <span class="string">&#x27;2022-01-05&#x27;</span> <span class="keyword">where</span> s_id <span class="operator">=</span> <span class="string">&#x27;101&#x27;</span></span><br></pre></td></tr></table></figure></li>
 <li><p>7、删除特定数据</p>
-<ul>
-<li><pre><code class="sql">delete from student where s_id = &#39;101&#39;     --删除数据是以行为单位
-</code></pre>
-</li>
-</ul>
-</li>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">delete</span> <span class="keyword">from</span> student <span class="keyword">where</span> s_id <span class="operator">=</span> <span class="string">&#x27;101&#x27;</span>     <span class="comment">--删除数据是以行为单位</span></span><br></pre></td></tr></table></figure></li>
 </ul>
 
       
@@ -1020,100 +1033,6 @@
 <h3 id="三、动态内存分配"><a href="#三、动态内存分配" class="headerlink" title="三、动态内存分配"></a>三、动态内存分配</h3><p>动态内存分配器（对堆的管理，从堆里面划分区域，一定是连续的）维护着一个进程的虚拟内存区域，称为堆（heap）。紧接未初始化的数据区域后面开始向上（高地址增长）。对于每一个进程，内核维护者一个变量brk（break），它指向堆的顶部。<br>显式分配器：malloc函数 和 free函数<br>隐式分配器：也叫做垃圾收集器，自动释放不再使用的块，例如java</p>
 <p>要考虑数据对齐<br>32位malloc返回8的倍数（long是8字节），64位返回16的倍数（long是16字节）<br>为什么要对齐？<br>不知道要存放什么数据，最坏打算：任何数据（最大的数据类型），保证了你的缓存<br>L1和L2是以块来通信，一个long（8个字节）的数据，不能存在于两个块，数据的存储是一个完整的数据，不能跨块或跨页保存（否则出现加载一个块可能不满足获取数据要求）</p>
 <p>释放<br>不是清空，是标记为空闲，可以再次使用，再次使用时需要初始化</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://yuegang123.github.io/2022/05/16/Android%E5%B8%83%E5%B1%80/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="ggliet">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="GGlietの记事本">
-      <meta itemprop="description" content="笔记|计算机知识|maybe生活分享">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | GGlietの记事本">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/05/16/Android%E5%B8%83%E5%B1%80/" class="post-title-link" itemprop="url">Android布局</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2022-05-16 09:32:44 / 修改时间：09:54:31" itemprop="dateCreated datePublished" datetime="2022-05-16T09:32:44+08:00">2022-05-16</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Android/" itemprop="url" rel="index"><span itemprop="name">Android</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>376</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>一般在根布局文件中会出现 tools：context &#x3D; 某个activity名称。<br>这个属性的意思是：如果你在AndroidManifest.xml文件中为某个activity设置了Theme样式，那么，一般情况下，你在layout布局里面是无法直接看到这个效果的。因为一份layout布局可以提供给很多个activity用，layout无法知道自己提供给了哪个activity，而这个activity又设置了怎样的样式。所以，我们要为layout设置这样一个属性，来告诉layout当前提供给了哪个activity使用，从而实时显示这个activity所设置的样式效果（如果有）。也就是，layout —-&gt;   activity —-&gt;Theme，建立起了链接。否则，即使你为activity设置了样式，你的layout布局文件也是不知道的。</p>
 
       
     </div>
@@ -1318,6 +1237,100 @@
 <p>android中的hint属性；输入框 指定提示语</p>
 <p>android:drawableBottom：在text的下方输出一个drawable，可以是图片，样式，颜色等。<br>android:drawableLeft：在text的左边输出一个drawable，可以是图片，样式，颜色等。<br>android:drawableRight：在text的右边输出一个drawable，可以是图片，样式，颜色等。<br>android:drawableTop：在text的正上方输出一个drawable，可以是图片，样式，颜色等。<br>android:drawableStart: 在text的开始处输出一个drawable，可以是图片，样式，颜色等。<br>android:drawableEnd: 在text的结束处输出一个drawable，可以是图片，样式，颜色等。<br>android:drawablePadding：设置text与drawable的间距，是与drawableLeft、 drawableRight、drawableTop、drawableBottom一起使用。</p>
 <p>android:layout_width:它是用来分配剩余空间的一个属性，你可以设置他的权重。0是默认宽度layout_width值wrap_content,1,2,3,4,自行测试</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://yuegang123.github.io/2022/05/16/Android%E5%B8%83%E5%B1%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="ggliet">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="GGlietの记事本">
+      <meta itemprop="description" content="笔记|计算机知识|maybe生活分享">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | GGlietの记事本">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/05/16/Android%E5%B8%83%E5%B1%80/" class="post-title-link" itemprop="url">Android布局</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-05-16 09:32:44 / 修改时间：09:54:31" itemprop="dateCreated datePublished" datetime="2022-05-16T09:32:44+08:00">2022-05-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Android/" itemprop="url" rel="index"><span itemprop="name">Android</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>376</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>一般在根布局文件中会出现 tools：context &#x3D; 某个activity名称。<br>这个属性的意思是：如果你在AndroidManifest.xml文件中为某个activity设置了Theme样式，那么，一般情况下，你在layout布局里面是无法直接看到这个效果的。因为一份layout布局可以提供给很多个activity用，layout无法知道自己提供给了哪个activity，而这个activity又设置了怎样的样式。所以，我们要为layout设置这样一个属性，来告诉layout当前提供给了哪个activity使用，从而实时显示这个activity所设置的样式效果（如果有）。也就是，layout —-&gt;   activity —-&gt;Theme，建立起了链接。否则，即使你为activity设置了样式，你的layout布局文件也是不知道的。</p>
 
       
     </div>
